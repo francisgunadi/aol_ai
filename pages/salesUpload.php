@@ -5,7 +5,7 @@
     
     <div class="bg-white rounded-lg p-6 mb-6">
         <h3 class="text-lg font-semibold mb-4">Upload Sales CSV</h3>
-        <div class="border-2 border-dashed border-green-300 rounded-lg p-8 text-center">
+        <div class="border-2 border-dashed border-green-300 rounded-lg p-8 text-center" onclick="document.getElementById('salesCSV').click()">
             <input type="file" id="salesCSV" accept=".csv" class="hidden" onchange="handleSalesCSVUpload(event)">
             <button class="btn-secondary" onclick="document.getElementById('salesCSV').click()">📄 Choose CSV File</button>
             <p class="text-gray-500 text-sm mt-3">CSV Format: date, dish_name, quantity_sold</p>
