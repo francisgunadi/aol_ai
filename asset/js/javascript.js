@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', () =>{
-    localStorage.clear()
-    
+    // localStorage.clear()
     // Data Store
     const store = {
         menu: [],
@@ -215,51 +213,87 @@ document.addEventListener('DOMContentLoaded', () =>{
         const tbody = document.getElementById('salesTable');
         if (store.sales.length === 0) {
             tbody.innerHTML = '<tr><td colspan="4" class="text-center text-gray-500 py-8">No sales data yet. Upload a CSV to get started.</td></tr>';
-            document.getElementById('salesCount').textContent = '0';
+            if (document.getElementById('salesCount')) {
+                document.getElementById('salesCount').textContent = '0';
+            }
             return;
         }
         
-        tbody.innerHTML = store.sales.slice(-10).map(sale => `
-            <tr>
-                <td>${sale.date}</td>
-                <td><strong>${sale.dishName}</strong></td>
-                <td>${sale.quantitySold}</td>
-                <td><span class="badge badge-success">✓ Recorded</span></td>
-            </tr>
-        `).join('');
+        tbody.innerHTML = store.sales.slice(-10).map(sale => {
+            // Handle both old format (dishName, quantitySold) and new format (dish_name, quantity/quantity_sold)
+            const dishName = sale.dish_name || '';
+            const quantity = sale.quantity || 0;
+            const date = sale.date || '';
+            
+            return `
+                <tr>
+                    <td>${date}</td>
+                    <td><strong>${dishName}</strong></td>
+                    <td>${quantity}</td>
+                    <td><span class="badge badge-success">✓ Recorded</span></td>
+                </tr>
+            `;
+        }).join('');
         
-        document.getElementById('salesCount').textContent = store.sales.length;
+        if (document.getElementById('salesCount')) {
+            document.getElementById('salesCount').textContent = store.sales.length;
+        }
     }
 
     function handleSalesCSVUpload(event) {
         const file = event.target.files[0];
         if (!file) return;
         
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const lines = e.target.result.split('\n');
-                lines.slice(1).forEach(line => {
-                    if (line.trim()) {
-                        const [date, dishName, quantitySold] = line.split(',').map(s => s.trim());
-                        if (date && dishName && quantitySold) {
-                            store.sales.push({
-                                id: Date.now() + Math.random(),
-                                date,
-                                dishName,
-                                quantitySold: parseInt(quantitySold)
-                            });
-                        }
-                    }
+        // Show loading state
+        const tbody = document.getElementById('salesTable');
+        tbody.innerHTML = '<tr><td colspan="4" class="text-center text-gray-500 py-8">⏳ Uploading and processing file...</td></tr>';
+        
+        // Create FormData to upload file
+        const formData = new FormData();
+        formData.append('salesCSV', file);
+        
+        // Upload file to server
+        fetch('utils/upload_sales.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            if (data.success && data.data) {
+                // Convert processed JSON data to store format
+                const processedData = Array.isArray(data.data) ? data.data : [];
+                
+                processedData.forEach(record => {
+                    // Map the processed data to our store format
+                    const sale = {
+                        id: Date.now() + Math.random(),
+                        date: record.date || '',
+                        dish_name: record.dish_name || '',
+                        quantity: record.quantity || 0
+                    };
+                    store.sales.push(sale);
                 });
+                
                 saveData();
                 updateSalesTable();
                 alert('Sales CSV imported successfully! ML models will be trained automatically.');
-            } catch (err) {
-                alert('Error parsing CSV: ' + err.message);
+                updateDashboard();
+            } else {
+                throw new Error('No data received from server');
             }
-        };
-        reader.readAsText(file);
+        })
+        .catch(error => {
+            console.error('Upload error:', error);
+            tbody.innerHTML = '<tr><td colspan="4" class="text-center text-red-500 py-8">❌ Error: ' + error.message + '</td></tr>';
+            alert('Error uploading file: ' + error.message);
+        });
+        
+        // Reset file input
+        event.target.value = '';
     }
 
     // Dashboard
@@ -278,9 +312,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         // Sales trend chart
         const ctx = document.getElementById('salesChart');
         if (ctx && store.sales.length > 0) {
-            const last30Days = store.sales.slice(-30);
-            const dates = [...new Set(last30Days.map(s => s.date))];
-            const totals = dates.map(d => last30Days.filter(s => s.date === d).reduce((sum, s) => sum + s.quantitySold, 0));
+            const allDates = [...new Set(store.sales.map(s => s.date))].sort();
+            const last30DaysDates = allDates.slice(-30);
+            const totals = last30DaysDates.map(d => 
+                store.sales.filter(s => s.date === d)
+                .reduce((sum, s) => sum + (s.quantity || 0), 0)
+            )
             
             if (window.salesChartInstance) {
                 window.salesChartInstance.destroy();
@@ -289,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             window.salesChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: dates,
+                    labels: last30DaysDates,
                     datasets: [{
                         label: 'Daily Sales',
                         data: totals,
@@ -489,4 +526,3 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     // Initialize
     window.addEventListener('DOMContentLoaded', loadData);
-});
