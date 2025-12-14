@@ -5,14 +5,14 @@ import sys
 
 def load_data(path: str, name: str):
     # Try semicolon separator first, then comma
-    try:
-        data = pd.read_csv(path, sep=";")
-    except:
-        data = pd.read_csv(path, sep=",")
+    data = pd.read_csv(path, sep=";")
 
     # Basic cleanups
     # Ensure column names are standard / trimmed
     data.columns = [c.strip().lower() for c in data.columns]
+
+    salesFile = "quantity" in data.columns and "date" in data.columns and "dish_name" in data.columns
+    pantryFile = "ingredient_name" in data.columns and "quantity" in data.columns and "unit" in data.columns
 
     # Parse date
     if "date" in data.columns:
@@ -24,7 +24,7 @@ def load_data(path: str, name: str):
     if "quantity" in data.columns:
         data["quantity"] = pd.to_numeric(data["quantity"], errors="coerce").fillna(0).astype(int)
     
-    if "quantity" in data.columns and "date" in data.columns and "dish_name" in data.columns:
+    if salesFile:
         data = data.groupby(["dish_name", "date"], as_index=False)["quantity"].sum()
         data = data.sort_values(by="date")
     
@@ -38,7 +38,7 @@ def load_data(path: str, name: str):
 
     output_path = os.path.join(outputDir, f"{name}.json")
 
-    if os.path.exists(output_path):
+    if os.path.exists(output_path) and salesFile:
         with open(output_path, "r") as f:
             existing_data = json.load(f)
         

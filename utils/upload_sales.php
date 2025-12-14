@@ -7,7 +7,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-if (!isset($_FILES['salesCSV']) || $_FILES['salesCSV']['error'] !== UPLOAD_ERR_OK) {
+// Determine file type from form field name (salesCSV, pantryCSV, menuCSV)
+$fileType = null;
+$fileKey = null;
+
+if (isset($_FILES['salesCSV']) && $_FILES['salesCSV']['error'] === UPLOAD_ERR_OK) {
+    $fileType = 'sales';
+    $fileKey = 'salesCSV';
+} elseif (isset($_FILES['pantryCSV']) && $_FILES['pantryCSV']['error'] === UPLOAD_ERR_OK) {
+    $fileType = 'pantry';
+    $fileKey = 'pantryCSV';
+} elseif (isset($_FILES['menuCSV']) && $_FILES['menuCSV']['error'] === UPLOAD_ERR_OK) {
+    $fileType = 'menu';
+    $fileKey = 'menuCSV';
+} else {
     http_response_code(400);
     echo json_encode(['error' => 'No file uploaded or upload error']);
     exit;
@@ -24,7 +37,7 @@ if (!is_dir($cleanedDir)) {
     mkdir($cleanedDir, 0777, true);
 }
 
-$file = $_FILES['salesCSV'];
+$file = $_FILES[$fileKey];
 $fileName = basename($file['name']);
 $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
 
@@ -35,11 +48,11 @@ if ($fileExtension !== 'csv') {
     exit;
 }
 
-// Generate unique filename
-$uniqueFileName = 'sales' . '.csv';
+// Generate filename based on file type
+$uniqueFileName = $fileType . '.csv';
 $uploadPath = $uploadDir . $uniqueFileName;
 
-if(file_exists($uploadPath)){
+if(file_exists($uploadPath) && $fileType === 'sales'){
     $uplaodedContent = file_get_contents($file['tmp_name']);
     $lines = explode("\n", $uplaodedContent);
 

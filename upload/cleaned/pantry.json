@@ -1,0 +1,322 @@
+[
+    {
+        "ingredient_name": "Alfredo Sauce",
+        "quantity": 80000,
+        "unit": "ml"
+    },
+    {
+        "ingredient_name": "Anchovies",
+        "quantity": 55000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Artichokes",
+        "quantity": 35000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Arugula",
+        "quantity": 85000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Asiago Cheese",
+        "quantity": 200000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Bacon",
+        "quantity": 175000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Barbecue Sauce",
+        "quantity": 75000,
+        "unit": "ml"
+    },
+    {
+        "ingredient_name": "Barbecued Chicken",
+        "quantity": 75000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Beef Chuck Roast",
+        "quantity": 125000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Blue Cheese",
+        "quantity": 160000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Brie Carre Cheese",
+        "quantity": 125000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Calabrese Salami",
+        "quantity": 47500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Capocollo",
+        "quantity": 22500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Caramelized Onions",
+        "quantity": 75000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Chicken",
+        "quantity": 75000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Chipotle Sauce",
+        "quantity": 75000,
+        "unit": "ml"
+    },
+    {
+        "ingredient_name": "Chorizo Sausage",
+        "quantity": 27000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Cilantro",
+        "quantity": 25000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Coarse Sicilian Salami",
+        "quantity": 225000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Corn",
+        "quantity": 60000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Eggplant",
+        "quantity": 27500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Feta Cheese",
+        "quantity": 178500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Fontina Cheese",
+        "quantity": 112500,
+        "unit": "kg"
+    },
+    {
+        "ingredient_name": "Friggitello Peppers",
+        "quantity": 20000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Garlic",
+        "quantity": 28000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Genoa Salami",
+        "quantity": 41500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Goat Cheese",
+        "quantity": 200000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Gorgonzola Piccante Cheese",
+        "quantity": 125000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Gouda Cheese",
+        "quantity": 152000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Green Olives",
+        "quantity": 115000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Green Peppers",
+        "quantity": 24920,
+        "unit": "ml"
+    },
+    {
+        "ingredient_name": "Italian Sausage",
+        "quantity": 160000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Jalapeno Peppers",
+        "quantity": 90000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Kalamata Olives",
+        "quantity": 20500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Luganega Sausage",
+        "quantity": 28000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Mozzarella Cheese",
+        "quantity": 225000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Mushrooms",
+        "quantity": 64500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Nduja Salami",
+        "quantity": 22250,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Onions",
+        "quantity": 95500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Oregano",
+        "quantity": 20000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Pancetta",
+        "quantity": 35500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Parmigiano Reggiano Cheese",
+        "quantity": 160000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Pears",
+        "quantity": 76500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Peperoncini verdi",
+        "quantity": 12500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Pepperoni",
+        "quantity": 44500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Pesto Sauce",
+        "quantity": 32500,
+        "unit": "ml"
+    },
+    {
+        "ingredient_name": "Pineapple",
+        "quantity": 18000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Plum Tomatoes",
+        "quantity": 31500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Prosciutto",
+        "quantity": 75000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Prosciutto di San Daniele",
+        "quantity": 21500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Provolone Cheese",
+        "quantity": 133500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Red Onions",
+        "quantity": 21500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Red Peppers",
+        "quantity": 18000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Ricotta Cheese",
+        "quantity": 82500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Romano Cheese",
+        "quantity": 140000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Sliced Ham",
+        "quantity": 35000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Smoked Gouda Cheese",
+        "quantity": 70500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Soppressata Salami",
+        "quantity": 28000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Spinach",
+        "quantity": 12500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Sun-dried Tomatoes",
+        "quantity": 164500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Thai Sweet Chilli Sauce",
+        "quantity": 24000,
+        "unit": "ml"
+    },
+    {
+        "ingredient_name": "Thyme",
+        "quantity": 17500,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Tomatoes",
+        "quantity": 250000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Zucchini",
+        "quantity": 34000,
+        "unit": "g"
+    }
+]

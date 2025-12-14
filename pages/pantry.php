@@ -20,8 +20,7 @@
                     <th>Ingredient</th>
                     <th>Quantity</th>
                     <th>Unit</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th colspan="2">Actions</th>
                 </tr>
             </thead>
             <tbody id="pantryTable">

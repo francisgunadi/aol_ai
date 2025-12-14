@@ -1,4 +1,4 @@
-    // localStorage.clear()
+    localStorage.clear()
     // Data Store
     const store = {
         menu: [],
@@ -84,33 +84,62 @@
         const file = event.target.files[0];
         if (!file) return;
         
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const lines = e.target.result.split('\n');
-                lines.slice(1).forEach(line => {
-                    if (line.trim()) {
-                        const [name, type, profile, flavor, price] = line.split(',').map(s => s.trim());
-                        if (name && type && profile && flavor && price) {
-                            store.menu.push({
-                                id: Date.now() + Math.random(),
-                                name,
-                                type,
-                                profile,
-                                flavor,
-                                price: parseFloat(price)
-                            });
-                        }
+        // Show loading state
+        const tbody = document.getElementById('menuTable');
+        const originalContent = tbody.innerHTML;
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-gray-500 py-8">⏳ Uploading and processing file...</td></tr>';
+        
+        // Create FormData to upload file
+        const formData = new FormData();
+        formData.append('menuCSV', file);
+        
+        // Upload file to server
+        fetch('utils/upload_sales.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            if (data.success && data.data) {
+                // Convert processed JSON data to store format
+                const processedData = Array.isArray(data.data) ? data.data : [];
+                
+                processedData.forEach(record => {
+                    // Map the processed data to our store format
+                    // Handle different possible column names
+                    const dish = {
+                        id: Date.now() + Math.random(),
+                        name: record.dish_name || record.name || '',
+                        type: record.type || '',
+                        profile: record.profile || '',
+                        flavor: record.flavor || '',
+                        price: parseFloat(record.price || 0)
+                    };
+                    
+                    if (dish.name && !isNaN(dish.price)) {
+                        store.menu.push(dish);
                     }
                 });
+                
                 saveData();
                 updateMenuTable();
                 alert('Menu CSV imported successfully!');
-            } catch (err) {
-                alert('Error parsing CSV: ' + err.message);
+            } else {
+                throw new Error('No data received from server');
             }
-        };
-        reader.readAsText(file);
+        })
+        .catch(error => {
+            console.error('Upload error:', error);
+            tbody.innerHTML = '<tr><td colspan="6" class="text-center text-red-500 py-8">❌ Error: ' + error.message + '</td></tr>';
+            alert('Error uploading file: ' + error.message);
+        });
+        
+        // Reset file input
+        event.target.value = '';
     }
 
     // Pantry Management
@@ -151,18 +180,14 @@
         }
         
         tbody.innerHTML = store.pantry.map(item => {
-            let badge = '<span class="badge badge-success">✓ Stocked</span>';
-            if (item.quantity < 10) badge = '<span class="badge badge-warning">⚠️ Low</span>';
-            if (item.quantity < 5) badge = '<span class="badge badge-danger">🔴 Critical</span>';
-            
             return `
                 <tr>
-                    <td><strong>${item.name}</strong></td>
+                    <td><strong>${item.ingredient_name}</strong></td>
                     <td>${item.quantity}</td>
                     <td>${item.unit}</td>
-                    <td>${badge}</td>
                     <td>
-                        <button onclick="deletePantryItem(${item.id})" class="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                        <button onclick="deletePantryItem('${item.ingredient_name}')" class="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                        <button onclick="changePantryQuantity('${item.ingredient_name}', ${item.quantity})" class="text-green-600 hover:text-green-800 font-medium">Update</button>
                     </td>
                 </tr>
             `;
@@ -171,41 +196,125 @@
         document.getElementById('pantryCount').textContent = store.pantry.length;
     }
 
-    function deletePantryItem(id) {
-        store.pantry = store.pantry.filter(p => p.id !== id);
+    function updatePantryItem(action, ingredient_name, quantity){
+        const formData = new FormData();
+        formData.append('action', action);
+        formData.append('ingredient_name', ingredient_name);
+        formData.append('quantity', quantity);
+        
+        fetch('utils/update_pantry.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                // Revert local change if server update failed
+                console.error('Error deleting from server:', data.error);
+                alert(`Error ${action === 'delete' ? 'deleting' : 'updating'} item from server: ` + data.error);
+                // Reload data to sync with server
+                loadData();
+            } else {
+                console.log(`Successfully ${action === 'delete' ? 'deleted' : 'updated'} from server:`, data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Network error:', error);
+            alert(`Error connecting to server. Item ${action === 'delete' ? 'deleted' : 'updated'} locally but may not be synced.`);
+            loadData();
+        });
+    }
+
+    function changePantryQuantity(ingredient_name, quantity){
+        const new_quantity = prompt("Update the quantity for ${ingredient_name}", quantity);
+        
+        if (new_quantity === null) {
+            return;
+        }
+
+        const parsedQuantity = parseFloat(new_quantity);
+        if (isNaN(parsedQuantity) || parsedQuantity < 0) {
+            alert('Please enter a valid positive number');
+            return;
+        }
+
+        const item = store.pantry.find(p => p.ingredient_name === ingredient_name);
+        if (!item) {
+            alert('Item not found in pantry');
+            return;
+        }
+
+        item.quantity = parsedQuantity;
         saveData();
         updatePantryTable();
+
+        updatePantryItem("update", ingredient_name, parsedQuantity);
+    }
+
+    function deletePantryItem(ingredient_name) {
+        if (!confirm(`Are you sure you want to delete "${ingredient_name}"?`)) {
+            return;
+        }
+
+        store.pantry = store.pantry.filter(p => p.ingredient_name !== ingredient_name);
+        saveData();
+        updatePantryTable();
+
+        updatePantryItem("delete", ingredient_name, 0)
     }
 
     function handlePantryCSVUpload(event) {
         const file = event.target.files[0];
         if (!file) return;
         
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const lines = e.target.result.split('\n');
-                lines.slice(1).forEach(line => {
-                    if (line.trim()) {
-                        const [name, quantity, unit] = line.split(',').map(s => s.trim());
-                        if (name && quantity && unit) {
-                            store.pantry.push({
-                                id: Date.now() + Math.random(),
-                                name,
-                                quantity: parseFloat(quantity),
-                                unit
-                            });
-                        }
-                    }
+        // Show loading state
+        const tbody = document.getElementById('pantryTable');
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-gray-500 py-8">⏳ Uploading and processing file...</td></tr>';
+        
+        // Create FormData to upload file
+        const formData = new FormData();
+        formData.append('pantryCSV', file);
+        
+        // Upload file to server
+        fetch('utils/upload_sales.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            if (data.success && data.data) {
+                // Convert processed JSON data to store format
+                const processedData = Array.isArray(data.data) ? data.data : [];
+                
+                processedData.forEach(record => {
+                    // Map the processed data to our store format
+                    const item = {
+                        ingredient_name: record.ingredient_name || record.name || '',
+                        quantity: record.quantity || 0,
+                        unit: record.unit || ''
+                    };
+                    store.pantry.push(item);
                 });
+                
                 saveData();
                 updatePantryTable();
                 alert('Pantry CSV imported successfully!');
-            } catch (err) {
-                alert('Error parsing CSV: ' + err.message);
+            } else {
+                throw new Error('No data received from server');
             }
-        };
-        reader.readAsText(file);
+        })
+        .catch(error => {
+            console.error('Upload error:', error);
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center text-red-500 py-8">❌ Error: ' + error.message + '</td></tr>';
+            alert('Error uploading file: ' + error.message);
+        });
+        
+        // Reset file input
+        event.target.value = '';
     }
 
     // Sales Management
