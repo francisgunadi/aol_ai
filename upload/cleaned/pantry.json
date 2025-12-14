@@ -1,7 +1,7 @@
 [
     {
         "ingredient_name": "Alfredo Sauce",
-        "quantity": 80000,
+        "quantity": 70000,
         "unit": "ml"
     },
     {
@@ -317,6 +317,11 @@
     {
         "ingredient_name": "Zucchini",
         "quantity": 34000,
+        "unit": "g"
+    },
+    {
+        "ingredient_name": "Salmon",
+        "quantity": "123",
         "unit": "g"
     }
 ]

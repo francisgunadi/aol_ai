@@ -155,17 +155,22 @@
 
     function addPantryItem() {
         const item = {
-            id: Date.now(),
-            name: document.getElementById('pantryIngredient').value,
+            ingredient_name: document.getElementById('pantryIngredient').value,
             quantity: parseFloat(document.getElementById('pantryQuantity').value),
             unit: document.getElementById('pantryUnit').value
         };
+
+        console.log(item.ingredient_name);
+        console.log(item.quantity);
+        console.log(item.unit);
         
-        if (item.name && !isNaN(item.quantity)) {
+        if (item.ingredient_name && !isNaN(item.quantity)) {
             store.pantry.push(item);
             saveData();
             updatePantryTable();
             closePantryModal();
+
+            updatePantryItem("add", item.ingredient_name, item.quantity, item.unit);
         } else {
             alert('Please fill in all fields');
         }
@@ -196,32 +201,52 @@
         document.getElementById('pantryCount').textContent = store.pantry.length;
     }
 
-    function updatePantryItem(action, ingredient_name, quantity){
+    function updatePantryItem(action, ingredient_name, quantity, unit){
         const formData = new FormData();
         formData.append('action', action);
         formData.append('ingredient_name', ingredient_name);
         formData.append('quantity', quantity);
+        formData.append("unit", unit);
         
         fetch('utils/update_pantry.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
-            if (data.error) {
+            if (data.error || !data.success) {
                 // Revert local change if server update failed
-                console.error('Error deleting from server:', data.error);
-                alert(`Error ${action === 'delete' ? 'deleting' : 'updating'} item from server: ` + data.error);
-                // Reload data to sync with server
-                loadData();
+                const actionVerb = action === 'delete' ? 'deleting' : 
+                                  action === 'add' ? 'adding' : 'updating';
+                console.error(`Error ${actionVerb} from server:`, data.error || 'Operation failed');
+                alert(`Error ${actionVerb} item from server: ` + (data.error || 'Operation failed'));
+                
+                // Remove from local store if add failed
+                if (action === 'add') {
+                    store.pantry = store.pantry.filter(p => p.ingredient_name !== ingredient_name);
+                    saveData();
+                    updatePantryTable();
+                } else {
+                    // Reload data to sync with server for update/delete
+                    loadData();
+                }
             } else {
-                console.log(`Successfully ${action === 'delete' ? 'deleted' : 'updated'} from server:`, data.message);
+                // Success
+                const actionVerb = action === 'delete' ? 'deleted' : 
+                                  action === 'add' ? 'added' : 'updated';
+                console.log(`Successfully ${actionVerb} from server:`, data.message || 'Operation completed');
             }
         })
         .catch(error => {
-            console.error('Network error:', error);
-            alert(`Error connecting to server. Item ${action === 'delete' ? 'deleted' : 'updated'} locally but may not be synced.`);
-            loadData();
+            console.error('Network/Parse error:', error);
+            const actionVerb = action === 'delete' ? 'deleted' : 
+                            action === 'add' ? 'added' : 'updated';
+            // alert(`Error connecting to server. Item ${actionVerb} locally but may not be synced.`);
         });
     }
 
@@ -248,7 +273,7 @@
         saveData();
         updatePantryTable();
 
-        updatePantryItem("update", ingredient_name, parsedQuantity);
+        updatePantryItem("update", ingredient_name, parsedQuantity, '');
     }
 
     function deletePantryItem(ingredient_name) {
@@ -260,7 +285,7 @@
         saveData();
         updatePantryTable();
 
-        updatePantryItem("delete", ingredient_name, 0)
+        updatePantryItem("delete", ingredient_name, 0, '')
     }
 
     function handlePantryCSVUpload(event) {

@@ -1,5 +1,5 @@
 ingredient_name;quantity;unit
-Alfredo Sauce;80000;ml
+Alfredo Sauce;70000.0;ml
 Anchovies;55000.0;g
 Artichokes;35000.0;g
 Arugula;85000.0;g
@@ -63,3 +63,4 @@ Thai Sweet Chilli Sauce;24000.0;ml
 Thyme;17500.0;g
 Tomatoes;250000.0;g
 Zucchini;34000.0;g
+Salmon;123;g
