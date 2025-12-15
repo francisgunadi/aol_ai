@@ -18,6 +18,7 @@
                     <th>Dish Name</th>
                     <th>Type</th>
                     <th>Profile</th>
+                    <th>Flavor</th>
                     <th>Price</th>
                     <th>Ingredients</th>
                     <th>Actions</th>
@@ -25,7 +26,7 @@
             </thead>
             <tbody id="menuTable">
                 <tr>
-                    <td colspan="6" class="text-center text-gray-500 py-8">No menu items yet. Add one to get started.</td>
+                    <td colspan="7" class="text-center text-gray-500 py-8">No menu items yet. Add one to get started.</td>
                 </tr>
             </tbody>
         </table>
@@ -45,11 +46,10 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Type</label>
                     <select id="menuType" class="form-input">
-                        <option>Main Course</option>
-                        <option>Appetizer</option>
-                        <option>Dessert</option>
-                        <option>Drink</option>
-                        <option>Salad</option>
+                        <option>Classic</option>
+                        <option>Veggie</option>
+                        <option>Supreme</option>
+                        <option>Chicken</option>
                     </select>
                 </div>
                 <div>
@@ -61,23 +61,18 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Profile</label>
                     <select id="menuProfile" class="form-input">
-                        <option>Fresh</option>
-                        <option>Heavy</option>
-                        <option>Creamy</option>
-                        <option>Cheesy</option>
-                        <option>Dry</option>
-                        <option>Spicy</option>
+                        <option>Balanced</option>
+                        <option>Light</option>
+                        <option>Rich</option>
+                        <option>Savory</option>
                     </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Flavor</label>
                     <select id="menuFlavor" class="form-input">
-                        <option>Sweet</option>
-                        <option>Sour</option>
-                        <option>Bitter</option>
-                        <option>Savory</option>
-                        <option>Salty</option>
-                        <option>Umami</option>
+                        <option>Mild</option>
+                        <option>Fresh</option>
+                        <option>Bold</option>
                     </select>
                 </div>
             </div>

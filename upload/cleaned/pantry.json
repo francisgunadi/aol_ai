@@ -318,10 +318,5 @@
         "ingredient_name": "Zucchini",
         "quantity": 34000,
         "unit": "g"
-    },
-    {
-        "ingredient_name": "Salmon",
-        "quantity": "123",
-        "unit": "g"
     }
 ]

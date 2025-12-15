@@ -87,7 +87,7 @@
         // Show loading state
         const tbody = document.getElementById('menuTable');
         const originalContent = tbody.innerHTML;
-        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-gray-500 py-8">⏳ Uploading and processing file...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" class="text-center text-gray-500 py-8">⏳ Uploading and processing file...</td></tr>';
         
         // Create FormData to upload file
         const formData = new FormData();
@@ -112,15 +112,15 @@
                     // Map the processed data to our store format
                     // Handle different possible column names
                     const dish = {
-                        id: Date.now() + Math.random(),
-                        name: record.dish_name || record.name || '',
+                        dish_name: record.dish_name || '',
                         type: record.type || '',
                         profile: record.profile || '',
                         flavor: record.flavor || '',
-                        price: parseFloat(record.price || 0)
+                        price: parseFloat(record.price || 0),
+                        ingredient: record.ingredient || []
                     };
                     
-                    if (dish.name && !isNaN(dish.price)) {
+                    if (dish.dish_name && !isNaN(dish.price)) {
                         store.menu.push(dish);
                     }
                 });

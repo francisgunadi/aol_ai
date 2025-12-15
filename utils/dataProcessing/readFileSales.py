@@ -23,6 +23,12 @@ def load_data(path: str, name: str):
     
     if "quantity" in data.columns:
         data["quantity"] = pd.to_numeric(data["quantity"], errors="coerce").fillna(0).astype(int)
+
+    if "price" in data.columns:
+        data["price"] = pd.to_numeric(data["price"], errors="coerce").fillna(0).astype(float)
+    
+    if "ingredient" in data.columns:
+        data["ingredient"] = data['ingredient'].split(',')
     
     if salesFile:
         data = data.groupby(["dish_name", "date"], as_index=False)["quantity"].sum()
