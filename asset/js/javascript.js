@@ -398,6 +398,202 @@
         event.target.value = '';
     }
 
+    // Ingredient Management
+    function openIngredientModal() {
+        document.getElementById('ingredientModal').classList.add('active');
+    }
+
+    function closeIngredientModal() {
+        document.getElementById('ingredientModal').classList.remove('active');
+        document.getElementById('ingredientIngredient').value = '';
+        document.getElementById('ingredientQuantity').value = '';
+    }
+
+    function addIngredientItem() {
+        const item = {
+            ingredient_name: document.getElementById('ingredientIngredient').value,
+            quantity: parseFloat(document.getElementById('ingredientQuantity').value),
+            unit: document.getElementById('ingredientUnit').value
+        };
+        
+        if (item.ingredient_name && !isNaN(item.quantity)) {
+            store.ingredient.push(item);
+            saveData();
+            updateIngredientTable();
+            closeIngredientModal();
+
+            updateIngredientItem("add", item.ingredient_name, item.quantity, item.unit);
+        } else {
+            alert('Please fill in all fields');
+        }
+    }
+
+    function updateIngredientTable() {
+        const tbody = document.getElementById('ingredientTable');
+        if (store.ingredient.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center text-gray-500 py-8">No ingredient items yet. Add one to get started.</td></tr>';
+            document.getElementById('ingredientCount').textContent = '0';
+            return;
+        }
+        
+        tbody.innerHTML = store.ingredient.map(item => {
+            return `
+                <tr>
+                    <td><strong>${item.ingredient_name}</strong></td>
+                    <td>${item.quantity}</td>
+                    <td>${item.unit}</td>
+                    <td>
+                        <button onclick="deleteIngredientItem('${item.ingredient_name}')" class="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                        <button onclick="changeIngredientQuantity('${item.ingredient_name}', ${item.quantity})" class="text-green-600 hover:text-green-800 font-medium">Update</button>
+                    </td>
+                </tr>
+            `;
+        }).join('');
+        
+        document.getElementById('ingredientCount').textContent = store.ingredient.length;
+    }
+
+    function updateIngredientItem(action, ingredient_name, quantity, unit){
+        const formData = new FormData();
+        formData.append('action', action);
+        formData.append('ingredient_name', ingredient_name);
+        formData.append('quantity', quantity);
+        formData.append("unit", unit);
+        
+        fetch('utils/update_ingredient.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error || !data.success) {
+                // Revert local change if server update failed
+                const actionVerb = action === 'delete' ? 'deleting' : 
+                                  action === 'add' ? 'adding' : 'updating';
+                console.error(`Error ${actionVerb} from server:`, data.error || 'Operation failed');
+                alert(`Error ${actionVerb} item from server: ` + (data.error || 'Operation failed'));
+                
+                // Remove from local store if add failed
+                if (action === 'add') {
+                    store.ingredient = store.ingredient.filter(p => p.ingredient_name !== ingredient_name);
+                    saveData();
+                    updateIngredientTable();
+                } else {
+                    // Reload data to sync with server for update/delete
+                    loadData();
+                }
+            } else {
+                // Success
+                const actionVerb = action === 'delete' ? 'deleted' : 
+                                  action === 'add' ? 'added' : 'updated';
+                console.log(`Successfully ${actionVerb} from server:`, data.message || 'Operation completed');
+            }
+        })
+        .catch(error => {
+            console.error('Network/Parse error:', error);
+            const actionVerb = action === 'delete' ? 'deleted' : 
+                            action === 'add' ? 'added' : 'updated';
+            // alert(`Error connecting to server. Item ${actionVerb} locally but may not be synced.`);
+        });
+    }
+
+    function changeIngredientQuantity(ingredient_name, quantity){
+        const new_quantity = prompt("Update the quantity for ${ingredient_name}", quantity);
+        
+        if (new_quantity === null) {
+            return;
+        }
+
+        const parsedQuantity = parseFloat(new_quantity);
+        if (isNaN(parsedQuantity) || parsedQuantity < 0) {
+            alert('Please enter a valid positive number');
+            return;
+        }
+
+        const item = store.ingredient.find(p => p.ingredient_name === ingredient_name);
+        if (!item) {
+            alert('Item not found in ingredient');
+            return;
+        }
+
+        item.quantity = parsedQuantity;
+        saveData();
+        updateIngredientTable();
+
+        updateIngredientItem("update", ingredient_name, parsedQuantity, '');
+    }
+
+    function deleteIngredientItem(ingredient_name) {
+        if (!confirm(`Are you sure you want to delete "${ingredient_name}"?`)) {
+            return;
+        }
+
+        store.ingredient = store.ingredient.filter(p => p.ingredient_name !== ingredient_name);
+        saveData();
+        updateIngredientTable();
+
+        updateIngredientItem("delete", ingredient_name, 0, '')
+    }
+
+    function handleIngredientCSVUpload(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        // Show loading state
+        const tbody = document.getElementById('ingredientTable');
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-gray-500 py-8">⏳ Uploading and processing file...</td></tr>';
+        
+        // Create FormData to upload file
+        const formData = new FormData();
+        formData.append('ingredientCSV', file);
+        
+        // Upload file to server
+        fetch('utils/upload_sales.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            if (data.success && data.data) {
+                // Convert processed JSON data to store format
+                const processedData = Array.isArray(data.data) ? data.data : [];
+                
+                processedData.forEach(record => {
+                    // Map the processed data to our store format
+                    const item = {
+                        ingredient_name: record.ingredient_name || record.name || '',
+                        quantity: record.quantity || 0,
+                        unit: record.unit || ''
+                    };
+                    store.ingredient.push(item);
+                });
+                
+                saveData();
+                updateIngredientTable();
+                alert('Ingredient CSV imported successfully!');
+            } else {
+                throw new Error('No data received from server');
+            }
+        })
+        .catch(error => {
+            console.error('Upload error:', error);
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center text-red-500 py-8">❌ Error: ' + error.message + '</td></tr>';
+            alert('Error uploading file: ' + error.message);
+        });
+        
+        // Reset file input
+        event.target.value = '';
+    }
+
     // Sales Management
     function updateSalesTable() {
         const tbody = document.getElementById('salesTable');

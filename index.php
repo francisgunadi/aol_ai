@@ -28,6 +28,9 @@
                 <!-- Pantry Management Page -->
                 <?php include "pages/pantry.php" ?>
 
+                <!-- Ingredients Management Page -->
+                <?php include "pages/ingredients.php" ?>
+
                 <!-- Sales Upload Page -->
                 <?php include "pages/salesUpload.php"?>
 

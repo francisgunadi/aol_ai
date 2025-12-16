@@ -19,6 +19,9 @@
             <div class="nav-item" onclick="showPage('sales')">
                 <span class="font-medium">Sales Upload</span>
             </div>
+            <div class="nav-item" onclick="showPage('ingredient')">
+                <span class="font-medium">Ingredient Upload</span>
+            </div>
             <div class="nav-item" onclick="showPage('forecast')">
                 <span class="font-medium">Forecasting</span>
             </div>
