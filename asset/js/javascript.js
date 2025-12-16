@@ -4,6 +4,7 @@
         menu: [],
         pantry: [],
         sales: [],
+        ingredient: [],
         forecasts: []
     };
 
@@ -432,7 +433,6 @@
         const tbody = document.getElementById('ingredientTable');
         if (store.ingredient.length === 0) {
             tbody.innerHTML = '<tr><td colspan="5" class="text-center text-gray-500 py-8">No ingredient items yet. Add one to get started.</td></tr>';
-            document.getElementById('ingredientCount').textContent = '0';
             return;
         }
         
@@ -449,8 +449,6 @@
                 </tr>
             `;
         }).join('');
-        
-        document.getElementById('ingredientCount').textContent = store.ingredient.length;
     }
 
     function updateIngredientItem(action, ingredient_name, quantity, unit){

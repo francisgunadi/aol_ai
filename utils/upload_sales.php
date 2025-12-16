@@ -20,6 +20,9 @@ if (isset($_FILES['salesCSV']) && $_FILES['salesCSV']['error'] === UPLOAD_ERR_OK
 } elseif (isset($_FILES['menuCSV']) && $_FILES['menuCSV']['error'] === UPLOAD_ERR_OK) {
     $fileType = 'menu';
     $fileKey = 'menuCSV';
+} elseif (isset($_FILES['ingredientCSV']) && $_FILES['ingredientCSV']['error'] === UPLOAD_ERR_OK) {
+    $fileType = 'ingredient';
+    $fileKey = 'ingredientCSV';
 } else {
     http_response_code(400);
     echo json_encode(['error' => 'No file uploaded or upload error']);
