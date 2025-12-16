@@ -28,7 +28,7 @@ def load_data(path: str, name: str):
         data["price"] = pd.to_numeric(data["price"], errors="coerce").fillna(0).astype(float)
     
     if "ingredient" in data.columns:
-        data["ingredient"] = data['ingredient'].split(',')
+        data["ingredient"] = data['ingredient'].str.split(',').apply(lambda list: [s.strip() for s in list])
     
     if salesFile:
         data = data.groupby(["dish_name", "date"], as_index=False)["quantity"].sum()

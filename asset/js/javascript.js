@@ -33,15 +33,15 @@
 
     function addMenuItem() {
         const dish = {
-            id: Date.now(),
-            name: document.getElementById('menuDishName').value,
+            dish_name: document.getElementById('menuDishName').value,
             type: document.getElementById('menuType').value,
             profile: document.getElementById('menuProfile').value,
             flavor: document.getElementById('menuFlavor').value,
-            price: parseFloat(document.getElementById('menuPrice').value)
+            price: parseFloat(document.getElementById('menuPrice').value),
+            ingredient: document.getElementById('menuIngredient').value.split(',').map(item => item.trim())
         };
 
-        if (dish.name && !isNaN(dish.price)) {
+        if (dish.dish_name && !isNaN(dish.price)) {
             store.menu.push(dish);
             saveData();
             updateMenuTable();
@@ -49,24 +49,31 @@
         } else {
             alert('Please fill in all fields');
         }
+
+        updateMenuItem("add", dish.dish_name, dish.type, dish.profile, dish.flavor, dish.price, dish.ingredient);
     }
 
     function updateMenuTable() {
         const tbody = document.getElementById('menuTable');
         if (store.menu.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="6" class="text-center text-gray-500 py-8">No menu items yet. Add one to get started.</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="7" class="text-center text-gray-500 py-8">No menu items yet. Add one to get started.</td></tr>';
             return;
         }
         
         tbody.innerHTML = store.menu.map(dish => `
             <tr>
-                <td><strong>${dish.name}</strong></td>
+                <td><strong>${dish.dish_name}</strong></td>
                 <td>${dish.type}</td>
                 <td><span class="badge badge-success">${dish.profile}</span></td>
+                <td><span class="badge badge-success">${dish.flavor}</span></td>
                 <td>$${dish.price.toFixed(2)}</td>
-                <td><span class="text-xs text-gray-500">Recipes →</span></td>
+                <td><span class="text-xs text-gray-500">
+                    ${Array.isArray(dish.ingredient) ?
+                        dish.ingredient.map(item => `<li>${item}</li>`).join('') : ''
+                    }
+                </span></td>
                 <td>
-                    <button onclick="deleteMenuItem(${dish.id})" class="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                    <button onclick="deleteMenuItem('${dish.dish_name}')" class="text-red-600 hover:text-red-800 font-medium">Delete</button>
                 </td>
             </tr>
         `).join('');
@@ -74,10 +81,63 @@
         document.getElementById('menuCount').textContent = store.menu.length;
     }
 
-    function deleteMenuItem(id) {
-        store.menu = store.menu.filter(m => m.id !== id);
+    function updateMenuItem(action, dish_name, type, profile, flavor, price, ingredient) {
+        const formData = new FormData();
+        formData.append('action', action);
+        formData.append('dish_name', dish_name);
+        formData.append('type', type);
+        formData.append('profile', profile);
+        formData.append('flavor', flavor);
+        formData.append('price', price);
+        formData.append(
+            'ingredient',
+            Array.isArray(ingredient) ? ingredient.join(',') : ingredient
+        );
+    
+        fetch('utils/update_menu.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error || !data.success) {
+                const actionVerb = action === 'delete' ? 'deleting' : 'adding';
+                console.error(`Error ${actionVerb} menu item on server:`, data.error || 'Operation failed');
+                alert(`Error ${actionVerb} menu item on server: ` + (data.error || 'Operation failed'));
+    
+                if (action === 'add') {
+                    // Remove from local store if add failed
+                    store.menu = store.menu.filter(m => m.dish_name !== dish_name);
+                    saveData();
+                    updateMenuTable();
+                } else if (action === 'delete') {
+                    // In a more complete app, you might re‑fetch from server here
+                }
+            } else {
+                const actionVerb = action === 'delete' ? 'deleted' : 'added';
+                console.log(`Menu item ${actionVerb} on server:`, data.message || 'Operation completed');
+            }
+        })
+        .catch(error => {
+            console.error('Network/parse error when updating menu:', error);
+        });
+    }
+
+    function deleteMenuItem(dish_name) {
+        if (!confirm(`Are you sure you want to delete "${dish_name}"?`)) {
+            return;
+        }
+
+        store.menu = store.menu.filter(m => m.dish_name !== dish_name);
         saveData();
         updateMenuTable();
+
+        updateMenuItem("delete", dish_name, '', '', '', '', '');
     }
 
     function handleMenuCSVUpload(event) {
@@ -134,7 +194,7 @@
         })
         .catch(error => {
             console.error('Upload error:', error);
-            tbody.innerHTML = '<tr><td colspan="6" class="text-center text-red-500 py-8">❌ Error: ' + error.message + '</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="7" class="text-center text-red-500 py-8">❌ Error: ' + error.message + '</td></tr>';
             alert('Error uploading file: ' + error.message);
         });
         
@@ -159,10 +219,6 @@
             quantity: parseFloat(document.getElementById('pantryQuantity').value),
             unit: document.getElementById('pantryUnit').value
         };
-
-        console.log(item.ingredient_name);
-        console.log(item.quantity);
-        console.log(item.unit);
         
         if (item.ingredient_name && !isNaN(item.quantity)) {
             store.pantry.push(item);

@@ -37,7 +37,7 @@
 <div id="menuModal" class="modal">
     <div class="modal-content">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Add Menu Item</h2>
-        <div class="space-y-4">
+        <div class="space-y-5">
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Dish Name</label>
                 <input type="text" id="menuDishName" class="form-input" placeholder="e.g., Grilled Salmon">
@@ -75,6 +75,10 @@
                         <option>Bold</option>
                     </select>
                 </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Dish Ingredients</label>
+                <input type="text" id="menuIngredient" class="form-input" placeholder="e.g., Tomatoes, Olives">
             </div>
             <div class="pt-4">
                 <button class="btn-primary w-full" onclick="addMenuItem()">Add Item</button>
