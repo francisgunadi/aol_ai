@@ -654,7 +654,6 @@
                 processedData.forEach(record => {
                     // Map the processed data to our store format
                     const sale = {
-                        id: Date.now() + Math.random(),
                         date: record.date || '',
                         dish_name: record.dish_name || '',
                         quantity: record.quantity || 0
@@ -743,10 +742,9 @@
     // Forecasting
     function runForecast() {
         const days = parseInt(document.getElementById('forecastDays').value);
-        const minDays = parseInt(document.getElementById('minTrainingDays').value);
         
-        if (!store.sales.length || !store.menu.length) {
-            alert('Please upload sales data and menu items first');
+        if (!store.sales.length || !store.menu.length || !store.ingredient.length || !store.pantry.length) {
+            alert('Please upload all the necessary first');
             return;
         }
         

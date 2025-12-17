@@ -6,14 +6,10 @@
     
     <div class="bg-white rounded-lg p-6 mb-6">
         <h3 class="text-lg font-semibold mb-4">Forecast Settings</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Forecast Days</label>
-                <input type="number" id="forecastDays" class="form-input" value="7" min="1" max="30">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Minimum Training Days</label>
-                <input type="number" id="minTrainingDays" class="form-input" value="10" min="1">
+                <input type="number" id="forecastDays" class="form-input" value="7" min="1" max="365">
             </div>
             <div class="flex items-end">
                 <button class="btn-primary w-full" onclick="runForecast()">🔮 Run Forecast</button>

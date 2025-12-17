@@ -1,4 +1,4 @@
-<div class="sidebar w-64 overflow-y-auto">
+<div class="sidebar w-70 overflow-y-auto">
     <div class="p-8">
         <div class="flex items-center gap-3 mb-8 nav-item" onclick="showPage('dashboard')">
             <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
@@ -11,22 +11,22 @@
                 <span class="font-medium">Dashboard</span>
             </div>
             <div class="nav-item" onclick="showPage('menu')">
-                <span class="font-medium">Menu Management</span>
+                <span class="font-medium">1. Menu Management</span>
             </div>
             <div class="nav-item" onclick="showPage('pantry')">
-                <span class="font-medium">Pantry Inventory</span>
-            </div>
-            <div class="nav-item" onclick="showPage('sales')">
-                <span class="font-medium">Sales Upload</span>
+                <span class="font-medium">2. Pantry Inventory</span>
             </div>
             <div class="nav-item" onclick="showPage('ingredient')">
-                <span class="font-medium">Ingredient Upload</span>
+                <span class="font-medium">3. Ingredient Upload</span>
+            </div>
+            <div class="nav-item" onclick="showPage('sales')">
+                <span class="font-medium">4. Sales Upload</span>
             </div>
             <div class="nav-item" onclick="showPage('forecast')">
-                <span class="font-medium">Forecasting</span>
+                <span class="font-medium">5. Forecasting</span>
             </div>
             <div class="nav-item" onclick="showPage('recommendations')">
-                <span class="font-medium">Recommendations</span>
+                <span class="font-medium">6. Recommendations</span>
             </div>
             <div class="nav-item" onclick="showPage('settings')">
                 <span class="font-medium">Settings</span>
