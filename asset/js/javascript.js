@@ -1,12 +1,21 @@
-    localStorage.clear()
+    // localStorage.clear()
     // Data Store
     const store = {
         menu: [],
         pantry: [],
         sales: [],
         ingredient: [],
-        forecasts: []
+        ingredientForecast: [],
+        salesForecast: [],
+        daysForecast: ""
     };
+
+    const restaurantInformation = {
+        name: "",
+        yearOfEstablishment: "",
+        capacity: "",
+        cuisine: ""
+    }
 
     // Load data from localStorage
     function loadData() {
@@ -18,8 +27,8 @@
     }
 
     // Save data to localStorage
-    function saveData() {
-        localStorage.setItem('smartbiteData', JSON.stringify(store));
+    function saveData(type) {
+        localStorage.setItem('smartbiteData', JSON.stringify(type));
     }
 
     // Menu Management
@@ -44,7 +53,7 @@
 
         if (dish.dish_name && !isNaN(dish.price)) {
             store.menu.push(dish);
-            saveData();
+            saveData("store");
             updateMenuTable();
             closeMenuModal();
         } else {
@@ -114,7 +123,7 @@
                 if (action === 'add') {
                     // Remove from local store if add failed
                     store.menu = store.menu.filter(m => m.dish_name !== dish_name);
-                    saveData();
+                    saveData("store");
                     updateMenuTable();
                 } else if (action === 'delete') {
                     // In a more complete app, you might re‑fetch from server here
@@ -135,7 +144,7 @@
         }
 
         store.menu = store.menu.filter(m => m.dish_name !== dish_name);
-        saveData();
+        saveData("store");
         updateMenuTable();
 
         updateMenuItem("delete", dish_name, '', '', '', '', '');
@@ -186,7 +195,7 @@
                     }
                 });
                 
-                saveData();
+                saveData("store");
                 updateMenuTable();
                 alert('Menu CSV imported successfully!');
             } else {
@@ -223,7 +232,7 @@
         
         if (item.ingredient_name && !isNaN(item.quantity)) {
             store.pantry.push(item);
-            saveData();
+            saveData("store");
             updatePantryTable();
             closePantryModal();
 
@@ -286,7 +295,7 @@
                 // Remove from local store if add failed
                 if (action === 'add') {
                     store.pantry = store.pantry.filter(p => p.ingredient_name !== ingredient_name);
-                    saveData();
+                    saveData("store");
                     updatePantryTable();
                 } else {
                     // Reload data to sync with server for update/delete
@@ -327,7 +336,7 @@
         }
 
         item.quantity = parsedQuantity;
-        saveData();
+        saveData("store");
         updatePantryTable();
 
         updatePantryItem("update", ingredient_name, parsedQuantity, '');
@@ -339,7 +348,7 @@
         }
 
         store.pantry = store.pantry.filter(p => p.ingredient_name !== ingredient_name);
-        saveData();
+        saveData("store");
         updatePantryTable();
 
         updatePantryItem("delete", ingredient_name, 0, '')
@@ -382,7 +391,7 @@
                     store.pantry.push(item);
                 });
                 
-                saveData();
+                saveData("store");
                 updatePantryTable();
                 alert('Pantry CSV imported successfully!');
             } else {
@@ -419,7 +428,7 @@
         
         if (item.ingredient_name && !isNaN(item.quantity)) {
             store.ingredient.push(item);
-            saveData();
+            saveData("store");
             updateIngredientTable();
             closeIngredientModal();
 
@@ -479,7 +488,7 @@
                 // Remove from local store if add failed
                 if (action === 'add') {
                     store.ingredient = store.ingredient.filter(p => p.ingredient_name !== ingredient_name);
-                    saveData();
+                    saveData("store");
                     updateIngredientTable();
                 } else {
                     // Reload data to sync with server for update/delete
@@ -520,7 +529,7 @@
         }
 
         item.quantity = parsedQuantity;
-        saveData();
+        saveData("store");
         updateIngredientTable();
 
         updateIngredientItem("update", ingredient_name, parsedQuantity, '');
@@ -532,7 +541,7 @@
         }
 
         store.ingredient = store.ingredient.filter(p => p.ingredient_name !== ingredient_name);
-        saveData();
+        saveData("store");
         updateIngredientTable();
 
         updateIngredientItem("delete", ingredient_name, 0, '')
@@ -575,7 +584,7 @@
                     store.ingredient.push(item);
                 });
                 
-                saveData();
+                saveData("store");
                 updateIngredientTable();
                 alert('Ingredient CSV imported successfully!');
             } else {
@@ -661,7 +670,7 @@
                     store.sales.push(sale);
                 });
                 
-                saveData();
+                saveData("store");
                 updateSalesTable();
                 alert('Sales CSV imported successfully! ML models will be trained automatically.');
                 updateDashboard();
@@ -689,6 +698,10 @@
         document.getElementById('lowStockCount').textContent = lowStock;
         
         updateCharts();
+
+        if(restaurantInformation.name.length > 0){
+            document.getElementById("welcomeMessage").innerHTML = `Welcome, ${restaurantInformation.name}!`;
+        }
     }
 
     function updateCharts() {
@@ -751,6 +764,9 @@
         const resultsDiv = document.getElementById('forecastResults');
         resultsDiv.innerHTML = '<p class=\"text-gray-500 text-sm\">Running forecast and computing ingredient needs...</p>';
 
+        const salesForecastDiv = document.getElementById('salesForecast');
+        salesForecastDiv.innerHTML = '<p class=\"text-gray-500 text-sm\">Running forecast and computing sales...</p>';
+        
         try {
             const response = await fetch('utils/run_forecast.php?days=' + encodeURIComponent(days), {
                 method: 'GET',
@@ -774,78 +790,94 @@
             const salesData = data.sales_data || [];
 
             // Store for potential reuse (e.g. exporting / other views)
-            store.forecasts = ingredients;
+            store.ingredientForecast = ingredients;
             store.salesForecast = salesData;
-            saveData();
+            store.daysForecast = days;
+            saveData("store");
 
-            if (!ingredients.length) {
-                resultsDiv.innerHTML = '<p class=\"text-gray-500 text-sm\">No ingredient requirements were generated.</p>';
-                return;
-            }
-
-            // Build sales summary (per-dish totals)
-            let salesSummaryHtml = '';
-            if (salesData.length > 0) {
-                const salesSummary = salesData.map(dish => {
-                    const total = dish.points.reduce((sum, point) => sum + (point.predicted_quantity || 0), 0);
-                    return { dish_name: dish.dish_name, total: total };
-                });
-                
-                salesSummaryHtml = `
-                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6">
-                        <div style="font-weight: 600; color: #111827; margin-bottom: 8px;">Forecasted Sales Summary (${days} days)</div>
-                        <div style="font-size: 14px; color: #6b7280; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px;">
-                            ${salesSummary.map(s => `
-                                <div>
-                                    <strong>${s.dish_name}:</strong> ${s.total.toFixed(1)} portions
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-            }
-
-            // Render ingredient table, highlighting ones that need to be bought
-            const rowsHtml = ingredients.map(ing => {
-                const needToBuy = ing.status === 'NEED_TO_BUY' || (ing.to_buy && ing.to_buy > 0);
-                const rowBg = needToBuy ? '#fef2f2' : '#ecfdf5';
-                const borderColor = needToBuy ? '#ef4444' : '#10b981';
-                const statusLabel = needToBuy ? 'NEED TO BUY' : 'ENOUGH';
-
-                return `
-                    <div style="padding: 12px; background-color: ${rowBg}; border-radius: 8px; border-left: 4px solid ${borderColor}">
-                        <div style="font-weight: 600; color: #111827">${ing.ingredient_name}</div>
-                        <div style="font-size: 14px; color: #6b7280">
-                            Required: <strong>${ing.required_qty.toFixed(2)}</strong> ${ing.unit || ''}
-                            &nbsp;|&nbsp;
-                            In stock: <strong>${ing.current_stock.toFixed(2)}</strong> ${ing.unit || ''}
-                            &nbsp;|&nbsp;
-                            To buy: <strong>${ing.to_buy.toFixed(2)}</strong> ${ing.unit || ''}
-                            <span class="badge ${needToBuy ? 'badge-danger' : 'badge-success'}" style="margin-left: 8px">
-                                ${statusLabel}
-                            </span>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-
-            resultsDiv.innerHTML = salesSummaryHtml + rowsHtml;
-
-            updateConfidenceChart();
+            updateForecast()
         } catch (err) {
             console.error(err);
             resultsDiv.innerHTML = `<p class=\"text-red-500 text-sm\">Failed to run forecast: ${err.message}</p>`;
         }
     }
 
+    function updateForecast(){
+        const ingredients = store.ingredientForecast;
+        const salesData = store.salesForecast;
+        const days = store.daysForecast;
+
+        if (!ingredients.length) {
+            resultsDiv.innerHTML = '<p class=\"text-gray-500 text-sm\">No ingredient requirements were generated.</p>';
+            return;
+        }
+
+        // Build sales summary (per-dish totals)
+        let salesSummaryHtml = '';
+        if (salesData.length > 0) {
+            const salesSummary = salesData.map(dish => {
+                const total = dish.points.reduce((sum, point) => sum + (point.predicted_quantity || 0), 0);
+                return { dish_name: dish.dish_name, total: total };
+            });
+            
+            salesSummaryHtml = `
+                <div style="margin-bottom: 20px; padding: 12px; background-color: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6">
+                    <div style="font-weight: 600; color: #111827; margin-bottom: 8px;">Forecasted Sales Summary (${days} days)</div>
+                    <div style="font-size: 14px; color: #6b7280; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 8px;">
+                        ${salesSummary.map(s => `
+                            <div>
+                                <strong>${s.dish_name}:</strong> ${s.total.toFixed(1)} portions
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        forecastExportButton = document.getElementById('forecastExportButton');
+        forecastExportButton.style.display = 'block';
+
+        // Render ingredient table, highlighting ones that need to be bought
+        const rowsHtml = ingredients.map(ing => {
+            const needToBuy = ing.status === 'NEED_TO_BUY' || (ing.to_buy && ing.to_buy > 0);
+            const rowBg = needToBuy ? '#fef2f2' : '#ecfdf5';
+            const borderColor = needToBuy ? '#ef4444' : '#10b981';
+            const statusLabel = needToBuy ? 'NEED TO BUY' : 'ENOUGH';
+
+            return `
+                <div style="padding: 12px; background-color: ${rowBg}; border-radius: 8px; border-left: 4px solid ${borderColor}">
+                    <div style="font-weight: 600; color: #111827">${ing.ingredient_name}</div>
+                    <div style="font-size: 14px; color: #6b7280">
+                        Required: <strong>${ing.required_qty.toFixed(2)}</strong> ${ing.unit || ''}
+                        &nbsp;|&nbsp;
+                        In stock: <strong>${ing.current_stock.toFixed(2)}</strong> ${ing.unit || ''}
+                        &nbsp;|&nbsp;
+                        To buy: <strong>${ing.to_buy.toFixed(2)}</strong> ${ing.unit || ''}
+                        <span class="badge ${needToBuy ? 'badge-danger' : 'badge-success'}" style="margin-left: 8px">
+                            ${statusLabel}
+                        </span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        const salesForecastDiv = document.getElementById('salesForecast');
+        const resultsDiv = document.getElementById('forecastResults');
+
+        salesForecastDiv.innerHTML = salesSummaryHtml;
+        resultsDiv.innerHTML = rowsHtml;
+
+        updateConfidenceChart();
+    }
+
     function updateConfidenceChart() {
-        if (!store.forecasts.length) return;
+        if (!store.ingredientForecast.length) return;
         
         const ctx = document.getElementById('confidenceChart');
         if (ctx) {
             // Interpret NEED_TO_BUY as \"high\" urgency, ENOUGH as low
-            const needToBuyCount = store.forecasts.filter(f => f.status === 'NEED_TO_BUY').length;
-            const enoughCount = store.forecasts.filter(f => f.status === 'ENOUGH').length;
+            const needToBuyCount = store.ingredientForecast.filter(f => f.status === 'NEED_TO_BUY').length;
+            const enoughCount = store.ingredientForecast.filter(f => f.status === 'ENOUGH').length;
             
             if (window.confidenceChartInstance) {
                 window.confidenceChartInstance.destroy();
@@ -871,26 +903,38 @@
         }
     }
 
-    // Recommendations
-    function generateRecommendations() {
-        if (!store.forecasts.length) {
-            alert('Please run forecasting first');
-            return;
+    // Settings
+    function saveRestaurantInformation(){
+        const restaurantName = document.getElementById("restaurantName").value;
+        const year = document.getElementById("restaurantYear").value;
+        const capacity = document.getElementById("restaurantCapacity").value;
+        const cuisine = document.getElementById("restaurantCuisine").value;
+
+        if(restaurantName.length > 0){
+            restaurantInformation.name = restaurantName;
         }
-        
-        // store.forecasts now holds ingredient-level recommendations from the Python model
-        const recommendations = store.forecasts.map(f => `
-            <div style="padding: 16px; background: ${f.status === 'NEED_TO_BUY' ? '#fef2f2' : '#ecfdf5'}; border-radius: 8px; border-left: 4px solid ${f.status === 'NEED_TO_BUY' ? '#ef4444' : '#10b981'}">
-                <div style="font-weight: 600; color: #111827; margin-bottom: 4px;">${f.ingredient_name}</div>
-                <div style="font-size: 14px; color: #6b7280">
-                    Required: <strong>${f.required_qty.toFixed(2)}</strong> ${f.unit || ''},
-                    In stock: <strong>${f.current_stock.toFixed(2)}</strong> ${f.unit || ''},
-                    To buy: <strong>${f.to_buy.toFixed(2)}</strong> ${f.unit || ''}
-                </div>
-            </div>
-        `).join('');
-        
-        document.getElementById('recommendationsContainer').innerHTML = recommendations || '<p>No recommendations available</p>';
+
+        if(year.length > 0){
+            restaurantInformation.yearOfEstablishment = restaurantName;
+        }
+
+        if(capacity.length > 0){
+            restaurantInformation.capacity = capacity;
+        }
+
+        if(cuisine.length > 0){
+            restaurantInformation.cuisine = cuisine;
+        }
+
+        alert("Information is saved!");
+        saveData("restaurantInformation");
+    }
+
+    function loadRestaurantInformation(){
+        document.getElementById("restaurantName").value = `${restaurantInformation.name}`;
+        document.getElementById("restaurantYear").value = `${restaurantInformation.yearOfEstablishment}`;
+        document.getElementById("restaurantCapacity").value = `${restaurantInformation.capacity}`;
+        document.getElementById("restaurantCuisine").value = `${restaurantInformation.cuisine}`;
     }
 
     // Export Functions
@@ -900,8 +944,8 @@
             return;
         }
         
-        const csv = 'Dish Name,Type,Profile,Flavor,Price\n' + 
-            store.menu.map(m => `"${m.name}","${m.type}","${m.profile}","${m.flavor}",${m.price}`).join('\n');
+        const csv = 'dish_name,type,profile,flavor,price,ingredient\n' + 
+            store.menu.map(m => `"${m.dish_name}","${m.type}","${m.profile}","${m.flavor}",${m.price},${m.ingredient}`).join('\n');
         downloadCSV(csv, 'menu.csv');
     }
 
@@ -912,7 +956,7 @@
         }
         
         const csv = 'Ingredient,Quantity,Unit\n' + 
-            store.pantry.map(p => `"${p.name}",${p.quantity},"${p.unit}"`).join('\n');
+            store.pantry.map(p => `"${p.ingredient_name}",${p.quantity},"${p.unit}"`).join('\n');
         downloadCSV(csv, 'pantry.csv');
     }
 
@@ -923,8 +967,33 @@
         }
         
         const csv = 'Date,Dish,Quantity\n' + 
-            store.sales.map(s => `"${s.date}","${s.dishName}",${s.quantitySold}`).join('\n');
+            store.sales.map(s => `"${s.date}","${s.dish_name}",${s.quantitySold}`).join('\n');
         downloadCSV(csv, 'sales.csv');
+    }
+
+    function exportIngredientCSV(){
+        if(store.ingredient.length <= 0){
+            alert("No data on ingredients list!");
+            return;
+        }
+
+        csv = "ingredient_name,quantity,unit\n" +
+            store.ingredient.map(i => `${i.ingredient_name}, ${i.quantity}, ${i.unit}`).join('\n');
+        downloadCSV(csv, "ingredients_list.csv");
+    }
+
+    function exportForecastCSV() {
+        if (store.salesForecast.length === 0) {
+            alert('No sales forecast to export');
+            return;
+        }
+        
+        const csv = 'Date,Dish,Quantity\n' + 
+            store.salesForecast.flatMap(s => s.points.map(p =>
+                    `"${p.date}",${s.dish_name},${p.predicted_quantity}`
+                )
+            ).join('\n');
+        downloadCSV(csv, 'sales_forecast.csv');
     }
 
     function downloadCSV(csv, filename) {

@@ -1,15 +1,29 @@
 <div id="settings" class="page">
     <div class="mb-6">
-        <h2 class="text-xl font-bold text-gray-900">Settings & Export</h2>
+        <h2 class="text-xl font-bold text-gray-900">Settings</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white rounded-lg p-6">
-            <h3 class="text-lg font-semibold mb-4">Data Export</h3>
-            <div class="space-y-3">
-                <button class="btn-secondary w-full" onclick="exportMenuCSV()">📥 Export Menu</button>
-                <button class="btn-secondary w-full" onclick="exportPantryCSV()">📥 Export Pantry</button>
-                <button class="btn-secondary w-full" onclick="exportSalesCSV()">📥 Export Sales</button>
+            <h3 class="text-lg font-semibold mb-4">Restaurant Profile</h3>
+            <div class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Restaurant Name</label>
+                    <input type="text" id="restaurantName" class="form-input" placeholder="e.g. Pizza Hut">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Year of Establishment</label>
+                    <input type="text" id="restaurantYear" class="form-input" placeholder="e.g. 2016">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Customer Capacity</label>
+                    <input type="text" id="restaurantCapacity" class="form-input" placeholder="Measured in seats">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Cuisine Specialty</label>
+                    <input type="text" id="restaurantCuisine" class="form-input" placeholder="e.g. Italian">
+                </div>
+                <button class="btn-primary" onclick="saveRestaurantInformation()">Save Restaurant Info</button>
             </div>
         </div>
         

@@ -1,6 +1,7 @@
 <div id="sales" class="page">
-    <div class="mb-6">
+    <div class="mb-6 flex justify-between items-center">
         <h2 class="text-xl font-bold text-gray-900 mb-4">Sales Data Upload</h2>
+        <button class="btn-secondary" onclick="exportSalesCSV()">📥 Export Sales</button>
     </div>
     
     <div class="bg-white rounded-lg p-6 mb-6">

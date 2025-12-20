@@ -1,7 +1,10 @@
 <div id="pantry" class="page">
     <div class="mb-6 flex justify-between items-center">
         <h2 class="text-xl font-bold text-gray-900">Pantry Inventory</h2>
-        <button class="btn-primary" onclick="openPantryModal()">+ Add Item</button>
+        <div>
+            <button class="btn-secondary mr-3" onclick="exportPantryCSV()">📥 Export Pantry</button>
+            <button class="btn-primary" onclick="openPantryModal()">+ Add Item</button>
+        </div>
     </div>
 
     <div class="bg-white rounded-lg p-6 mb-6">

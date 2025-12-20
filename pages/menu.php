@@ -1,7 +1,10 @@
 <div id="menu" class="page">
     <div class="mb-6 flex justify-between items-center">
         <h2 class="text-xl font-bold text-gray-900">Menu Items</h2>
-        <button class="btn-primary" onclick="openMenuModal()">+ Add Menu Item</button>
+        <div>
+            <button class="btn-secondary mr-3" onclick="exportMenuCSV()">📥 Export Menu</button>
+            <button class="btn-primary" onclick="openMenuModal()">+ Add Menu Item</button>
+        </div>
     </div>
     <div class="bg-white rounded-lg p-6 mb-6">
         <h3 class="text-lg font-semibold mb-4">Upload Menu CSV</h3>

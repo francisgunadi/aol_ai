@@ -65,11 +65,20 @@
             recommendations: 'Ingredient Recommendations',
             settings: 'Settings & Export'
         };
+
         document.getElementById('pageTitle').textContent = titles[pageName];
         
+        if (pageName === 'dashboard') updateDashboard();
         if (pageName === 'menu') updateMenuTable();
         if (pageName === 'pantry') updatePantryTable();
+        if (pageName === 'ingredient') updateIngredientTable();
         if (pageName === 'sales') updateSalesTable();
+        if (pageName === 'forecast'){
+            forecastExportButton = document.getElementById('forecastExportButton');
+            forecastExportButton.style.display = 'none';
+            updateForecast();
+        }
+        if(pageName === 'settings') loadRestaurantInformation();
     }
 </script>
 </html>

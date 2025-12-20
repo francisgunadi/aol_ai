@@ -17,6 +17,18 @@
         </div>
     </div>
     
+    <div class="grid grid-cols-1 lg:grid-cols-1 mb-6">
+        <div class="bg-white rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-4">Sales Forecast</h3>
+            <div id="salesForecast" class="space-y-3">
+                <p class="text-gray-500 text-sm">Find how many portions of each dish will be sold in the future.</p>
+            </div>
+            <div class="space-y-1" id="forecastExportButton">
+                <button class="btn-secondary w-full" onclick="exportForecastCSV()" >Export Sales Forecast</button>
+            </div>
+        </div>
+    </div>
+    
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="bg-white rounded-lg p-6">
             <h3 class="text-lg font-semibold mb-4">Ingredient Requirements</h3>

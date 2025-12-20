@@ -333,7 +333,7 @@ def _forecasts_dict_to_list(forecasts_dict: dict) -> list:
             
             points.append({
                 "date": date_str,
-                "predicted_quantity": float(row.get("predicted_quantity", 0.0)),
+                "predicted_quantity": int(row.get("predicted_quantity", 0.0)),
             })
         
         result.append({
