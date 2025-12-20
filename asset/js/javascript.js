@@ -740,45 +740,112 @@
     }
 
     // Forecasting
-    function runForecast() {
+    async function runForecast() {
         const days = parseInt(document.getElementById('forecastDays').value);
         
-        if (!store.sales.length || !store.menu.length || !store.ingredient.length || !store.pantry.length) {
-            alert('Please upload all the necessary first');
-            return;
-        }
-        
-        // Simulate forecasting
-        const forecastResults = store.menu.map(dish => ({
-            dish: dish.name,
-            confidence: Math.random() > 0.3 ? 'high' : 'low',
-            forecast: Math.floor(Math.random() * 50 + 10)
-        }));
-        
-        store.forecasts = forecastResults;
-        saveData();
-        
+        // if (!store.sales.length || !store.menu.length || !store.ingredient.length || !store.pantry.length) {
+        //     alert('Please upload all the necessary first');
+        //     return;
+        // }
+
         const resultsDiv = document.getElementById('forecastResults');
-        resultsDiv.innerHTML = forecastResults.map(f => `
-            <div style="padding: 12px; background-color: ${f.confidence === 'high' ? '#d1fae5' : '#fef3c7'}; border-radius: 8px; border-left: 4px solid ${f.confidence === 'high' ? '#10b981' : '#f59e0b'}">
-                <div style="font-weight: 600; color: #111827">${f.dish}</div>
-                <div style="font-size: 14px; color: #6b7280">
-                    Predicted Sales: <strong>${f.forecast}</strong> units
-                    <span class="badge ${f.confidence === 'high' ? 'badge-success' : 'badge-warning'}" style="margin-left: 8px">${f.confidence.toUpperCase()} CONFIDENCE</span>
-                </div>
-            </div>
-        `).join('');
-        
-        updateConfidenceChart();
+        resultsDiv.innerHTML = '<p class=\"text-gray-500 text-sm\">Running forecast and computing ingredient needs...</p>';
+
+        try {
+            const response = await fetch('utils/run_forecast.php?days=' + encodeURIComponent(days), {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                const text = await response.text();
+                throw new Error('Forecast request failed: ' + text);
+            }
+
+            const data = await response.json();
+
+            if (!data.success) {
+                throw new Error(data.error || 'Forecast script returned an error');
+            }
+
+            const ingredients = data.ingredients || [];
+            const salesData = data.sales_data || [];
+
+            // Store for potential reuse (e.g. exporting / other views)
+            store.forecasts = ingredients;
+            store.salesForecast = salesData;
+            saveData();
+
+            if (!ingredients.length) {
+                resultsDiv.innerHTML = '<p class=\"text-gray-500 text-sm\">No ingredient requirements were generated.</p>';
+                return;
+            }
+
+            // Build sales summary (per-dish totals)
+            let salesSummaryHtml = '';
+            if (salesData.length > 0) {
+                const salesSummary = salesData.map(dish => {
+                    const total = dish.points.reduce((sum, point) => sum + (point.predicted_quantity || 0), 0);
+                    return { dish_name: dish.dish_name, total: total };
+                });
+                
+                salesSummaryHtml = `
+                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6">
+                        <div style="font-weight: 600; color: #111827; margin-bottom: 8px;">Forecasted Sales Summary (${days} days)</div>
+                        <div style="font-size: 14px; color: #6b7280; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px;">
+                            ${salesSummary.map(s => `
+                                <div>
+                                    <strong>${s.dish_name}:</strong> ${s.total.toFixed(1)} portions
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Render ingredient table, highlighting ones that need to be bought
+            const rowsHtml = ingredients.map(ing => {
+                const needToBuy = ing.status === 'NEED_TO_BUY' || (ing.to_buy && ing.to_buy > 0);
+                const rowBg = needToBuy ? '#fef2f2' : '#ecfdf5';
+                const borderColor = needToBuy ? '#ef4444' : '#10b981';
+                const statusLabel = needToBuy ? 'NEED TO BUY' : 'ENOUGH';
+
+                return `
+                    <div style="padding: 12px; background-color: ${rowBg}; border-radius: 8px; border-left: 4px solid ${borderColor}">
+                        <div style="font-weight: 600; color: #111827">${ing.ingredient_name}</div>
+                        <div style="font-size: 14px; color: #6b7280">
+                            Required: <strong>${ing.required_qty.toFixed(2)}</strong> ${ing.unit || ''}
+                            &nbsp;|&nbsp;
+                            In stock: <strong>${ing.current_stock.toFixed(2)}</strong> ${ing.unit || ''}
+                            &nbsp;|&nbsp;
+                            To buy: <strong>${ing.to_buy.toFixed(2)}</strong> ${ing.unit || ''}
+                            <span class="badge ${needToBuy ? 'badge-danger' : 'badge-success'}" style="margin-left: 8px">
+                                ${statusLabel}
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            resultsDiv.innerHTML = salesSummaryHtml + rowsHtml;
+
+            updateConfidenceChart();
+        } catch (err) {
+            console.error(err);
+            resultsDiv.innerHTML = `<p class=\"text-red-500 text-sm\">Failed to run forecast: ${err.message}</p>`;
+        }
     }
 
     function updateConfidenceChart() {
-        if (store.forecasts.length === 0) return;
+        if (!store.forecasts.length) return;
         
         const ctx = document.getElementById('confidenceChart');
         if (ctx) {
-            const high = store.forecasts.filter(f => f.confidence === 'high').length;
-            const low = store.forecasts.filter(f => f.confidence === 'low').length;
+            // Interpret NEED_TO_BUY as \"high\" urgency, ENOUGH as low
+            const needToBuyCount = store.forecasts.filter(f => f.status === 'NEED_TO_BUY').length;
+            const enoughCount = store.forecasts.filter(f => f.status === 'ENOUGH').length;
             
             if (window.confidenceChartInstance) {
                 window.confidenceChartInstance.destroy();
@@ -787,10 +854,10 @@
             window.confidenceChartInstance = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['High Confidence', 'Low Confidence'],
+                    labels: ['Need To Buy', 'Enough Stock'],
                     datasets: [{
-                        data: [high, low],
-                        backgroundColor: ['#10b981', '#fbbf24']
+                        data: [needToBuyCount, enoughCount],
+                        backgroundColor: ['#ef4444', '#10b981']
                     }]
                 },
                 options: {
@@ -811,11 +878,14 @@
             return;
         }
         
+        // store.forecasts now holds ingredient-level recommendations from the Python model
         const recommendations = store.forecasts.map(f => `
-            <div style="padding: 16px; background: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981">
-                <div style="font-weight: 600; color: #111827 mb: 8px">${f.dish}</div>
+            <div style="padding: 16px; background: ${f.status === 'NEED_TO_BUY' ? '#fef2f2' : '#ecfdf5'}; border-radius: 8px; border-left: 4px solid ${f.status === 'NEED_TO_BUY' ? '#ef4444' : '#10b981'}">
+                <div style="font-weight: 600; color: #111827; margin-bottom: 4px;">${f.ingredient_name}</div>
                 <div style="font-size: 14px; color: #6b7280">
-                    Purchase <strong>${Math.ceil(f.forecast * 1.2)}</strong> units to meet forecasted demand with 20% buffer
+                    Required: <strong>${f.required_qty.toFixed(2)}</strong> ${f.unit || ''},
+                    In stock: <strong>${f.current_stock.toFixed(2)}</strong> ${f.unit || ''},
+                    To buy: <strong>${f.to_buy.toFixed(2)}</strong> ${f.unit || ''}
                 </div>
             </div>
         `).join('');

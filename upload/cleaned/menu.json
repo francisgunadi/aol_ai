@@ -4,7 +4,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Sliced Ham",
             "Pineapple",
@@ -16,7 +16,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Pepperoni",
             "Mushrooms",
@@ -30,7 +30,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Mozzarella Cheese",
             "Provolone Cheese",
@@ -45,7 +45,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Calabrese Salami",
             "Capocollo",
@@ -60,7 +60,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Tomatoes",
             "Red Peppers",
@@ -77,7 +77,7 @@
         "type": "Chicken",
         "profile": "Savory",
         "flavor": "Mild",
-        "price": 11,
+        "price": 11.0,
         "ingredient": [
             "Chicken",
             "Pineapple",
@@ -91,7 +91,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Prosciutto di San Daniele",
             "Arugula",
@@ -103,7 +103,7 @@
         "type": "Chicken",
         "profile": "Savory",
         "flavor": "Mild",
-        "price": 11,
+        "price": 11.0,
         "ingredient": [
             "Barbecued Chicken",
             "Red Peppers",
@@ -118,7 +118,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Kalamata Olives",
             "Feta Cheese",
@@ -133,7 +133,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Spinach",
             "Red Onions",
@@ -150,7 +150,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Spinach",
             "Mushrooms",
@@ -164,7 +164,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Capocollo",
             "Red Peppers",
@@ -179,7 +179,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Capocollo",
             "Tomatoes",
@@ -194,7 +194,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Spinach",
             "Artichokes",
@@ -209,7 +209,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Mushrooms",
             "Tomatoes",
@@ -226,7 +226,7 @@
         "type": "Chicken",
         "profile": "Savory",
         "flavor": "Mild",
-        "price": 11,
+        "price": 11.0,
         "ingredient": [
             "Chicken",
             "Tomatoes",
@@ -243,7 +243,7 @@
         "type": "Chicken",
         "profile": "Savory",
         "flavor": "Mild",
-        "price": 11,
+        "price": 11.0,
         "ingredient": [
             "Chicken",
             "Artichokes",
@@ -259,7 +259,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Mozzarella Cheese",
             "Pepperoni"
@@ -270,7 +270,7 @@
         "type": "Chicken",
         "profile": "Savory",
         "flavor": "Mild",
-        "price": 11,
+        "price": 11.0,
         "ingredient": [
             "Chicken",
             "Tomatoes",
@@ -285,7 +285,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Bacon",
             "Pepperoni",
@@ -298,7 +298,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Soppressata Salami",
             "Fontina Cheese",
@@ -312,7 +312,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Ricotta Cheese",
             "Gorgonzola Piccante Cheese",
@@ -326,7 +326,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Tomatoes",
             "Anchovies",
@@ -340,7 +340,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Nduja Salami",
             "Pancetta",
@@ -355,7 +355,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Eggplant",
             "Artichokes",
@@ -371,7 +371,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Spinach",
             "Artichokes",
@@ -387,7 +387,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Genoa Salami",
             "Capocollo",
@@ -402,7 +402,7 @@
         "type": "Veggie",
         "profile": "Light",
         "flavor": "Fresh",
-        "price": 9,
+        "price": 9.0,
         "ingredient": [
             "Spinach",
             "Mushrooms",
@@ -416,7 +416,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Coarse Sicilian Salami",
             "Tomatoes",
@@ -431,7 +431,7 @@
         "type": "Chicken",
         "profile": "Savory",
         "flavor": "Mild",
-        "price": 11,
+        "price": 11.0,
         "ingredient": [
             "Chicken",
             "Red Onions",
@@ -446,7 +446,7 @@
         "type": "Classic",
         "profile": "Balanced",
         "flavor": "Mild",
-        "price": 10,
+        "price": 10.0,
         "ingredient": [
             "Pepperoni",
             "Mushrooms",
@@ -458,7 +458,7 @@
         "type": "Supreme",
         "profile": "Rich",
         "flavor": "Bold",
-        "price": 12,
+        "price": 12.0,
         "ingredient": [
             "Brie Carre Cheese",
             "Prosciutto",
@@ -467,13 +467,5 @@
             "Thyme",
             "Garlic"
         ]
-    },
-    {
-        "dish_name": "Pepperoni and Salami",
-        "price": "17.8",
-        "flavor": "Mild",
-        "profile": "Savory",
-        "type": "Supreme",
-        "ingredient": "Tomatoes,Red Peppers,Pepperoni,Salami,Cheese,Garlic"
     }
 ]

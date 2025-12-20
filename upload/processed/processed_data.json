@@ -6450,12 +6450,30 @@
     "The Brie Carre Pizza": [
         {
             "dish_name": "The Brie Carre Pizza",
+            "date": "2015-01-08",
+            "quantity": 0,
+            "year": 2015,
+            "weekOfYear": 2,
+            "pastWeeklySalesAvg": 1.1428571428571428,
+            "time_idx": 0
+        },
+        {
+            "dish_name": "The Brie Carre Pizza",
+            "date": "2015-01-09",
+            "quantity": 1,
+            "year": 2015,
+            "weekOfYear": 2,
+            "pastWeeklySalesAvg": 1.1428571428571428,
+            "time_idx": 1
+        },
+        {
+            "dish_name": "The Brie Carre Pizza",
             "date": "2015-01-10",
             "quantity": 1,
             "year": 2015,
             "weekOfYear": 2,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 0
+            "time_idx": 2
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6464,7 +6482,7 @@
             "year": 2015,
             "weekOfYear": 2,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 1
+            "time_idx": 3
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6473,7 +6491,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 2
+            "time_idx": 4
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6482,7 +6500,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 3
+            "time_idx": 5
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6491,7 +6509,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 4
+            "time_idx": 6
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6500,7 +6518,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 5
+            "time_idx": 7
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6509,7 +6527,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 6
+            "time_idx": 8
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6518,7 +6536,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 7
+            "time_idx": 9
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6527,7 +6545,7 @@
             "year": 2015,
             "weekOfYear": 3,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 8
+            "time_idx": 10
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6536,7 +6554,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 9
+            "time_idx": 11
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6545,7 +6563,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 10
+            "time_idx": 12
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6554,7 +6572,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 11
+            "time_idx": 13
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6563,7 +6581,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 12
+            "time_idx": 14
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6572,7 +6590,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 13
+            "time_idx": 15
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6581,7 +6599,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 14
+            "time_idx": 16
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6590,7 +6608,7 @@
             "year": 2015,
             "weekOfYear": 4,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 15
+            "time_idx": 17
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6599,7 +6617,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 16
+            "time_idx": 18
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6608,7 +6626,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 17
+            "time_idx": 19
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6617,7 +6635,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 18
+            "time_idx": 20
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6626,7 +6644,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 19
+            "time_idx": 21
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6635,7 +6653,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 20
+            "time_idx": 22
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6644,7 +6662,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 21
+            "time_idx": 23
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6653,7 +6671,7 @@
             "year": 2015,
             "weekOfYear": 5,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 22
+            "time_idx": 24
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6662,7 +6680,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 23
+            "time_idx": 25
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6671,7 +6689,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 24
+            "time_idx": 26
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6680,7 +6698,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 25
+            "time_idx": 27
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6689,7 +6707,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 26
+            "time_idx": 28
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6698,7 +6716,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 27
+            "time_idx": 29
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6707,7 +6725,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 2.142857142857143,
-            "time_idx": 28
+            "time_idx": 30
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6716,7 +6734,7 @@
             "year": 2015,
             "weekOfYear": 6,
             "pastWeeklySalesAvg": 2.2857142857142856,
-            "time_idx": 29
+            "time_idx": 31
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6725,7 +6743,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 2.142857142857143,
-            "time_idx": 30
+            "time_idx": 32
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6734,7 +6752,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 31
+            "time_idx": 33
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6743,7 +6761,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 2.142857142857143,
-            "time_idx": 32
+            "time_idx": 34
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6752,7 +6770,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 33
+            "time_idx": 35
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6761,7 +6779,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 34
+            "time_idx": 36
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6770,7 +6788,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 35
+            "time_idx": 37
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6779,7 +6797,7 @@
             "year": 2015,
             "weekOfYear": 7,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 36
+            "time_idx": 38
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6788,7 +6806,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 37
+            "time_idx": 39
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6797,7 +6815,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 38
+            "time_idx": 40
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6806,7 +6824,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 39
+            "time_idx": 41
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6815,7 +6833,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 40
+            "time_idx": 42
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6824,7 +6842,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 41
+            "time_idx": 43
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6833,7 +6851,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 42
+            "time_idx": 44
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6842,7 +6860,7 @@
             "year": 2015,
             "weekOfYear": 8,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 43
+            "time_idx": 45
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6851,7 +6869,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 44
+            "time_idx": 46
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6860,7 +6878,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 45
+            "time_idx": 47
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6869,7 +6887,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 46
+            "time_idx": 48
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6878,7 +6896,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 47
+            "time_idx": 49
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6887,7 +6905,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 48
+            "time_idx": 50
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6896,7 +6914,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 49
+            "time_idx": 51
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6905,7 +6923,7 @@
             "year": 2015,
             "weekOfYear": 9,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 50
+            "time_idx": 52
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6914,7 +6932,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 51
+            "time_idx": 53
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6923,7 +6941,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 52
+            "time_idx": 54
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6932,7 +6950,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 53
+            "time_idx": 55
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6941,7 +6959,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 54
+            "time_idx": 56
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6950,7 +6968,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 55
+            "time_idx": 57
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6959,7 +6977,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 56
+            "time_idx": 58
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6968,7 +6986,7 @@
             "year": 2015,
             "weekOfYear": 10,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 57
+            "time_idx": 59
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6977,7 +6995,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 58
+            "time_idx": 60
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6986,7 +7004,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 59
+            "time_idx": 61
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -6995,7 +7013,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 60
+            "time_idx": 62
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7004,7 +7022,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 61
+            "time_idx": 63
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7013,7 +7031,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 2.2857142857142856,
-            "time_idx": 62
+            "time_idx": 64
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7022,7 +7040,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 63
+            "time_idx": 65
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7031,7 +7049,7 @@
             "year": 2015,
             "weekOfYear": 11,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 64
+            "time_idx": 66
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7040,7 +7058,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 65
+            "time_idx": 67
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7049,7 +7067,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 66
+            "time_idx": 68
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7058,7 +7076,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 67
+            "time_idx": 69
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7067,7 +7085,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 68
+            "time_idx": 70
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7076,7 +7094,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 69
+            "time_idx": 71
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7085,7 +7103,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 70
+            "time_idx": 72
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7094,7 +7112,7 @@
             "year": 2015,
             "weekOfYear": 12,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 71
+            "time_idx": 73
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7103,7 +7121,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 72
+            "time_idx": 74
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7112,7 +7130,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 73
+            "time_idx": 75
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7121,7 +7139,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 74
+            "time_idx": 76
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7130,7 +7148,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 75
+            "time_idx": 77
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7139,7 +7157,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 76
+            "time_idx": 78
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7148,7 +7166,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 77
+            "time_idx": 79
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7157,7 +7175,7 @@
             "year": 2015,
             "weekOfYear": 13,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 78
+            "time_idx": 80
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7166,7 +7184,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 79
+            "time_idx": 81
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7175,7 +7193,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 80
+            "time_idx": 82
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7184,7 +7202,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 81
+            "time_idx": 83
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7193,7 +7211,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 82
+            "time_idx": 84
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7202,7 +7220,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 83
+            "time_idx": 85
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7211,7 +7229,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 84
+            "time_idx": 86
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7220,7 +7238,7 @@
             "year": 2015,
             "weekOfYear": 14,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 85
+            "time_idx": 87
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7229,7 +7247,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 86
+            "time_idx": 88
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7238,7 +7256,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 87
+            "time_idx": 89
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7247,7 +7265,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 88
+            "time_idx": 90
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7256,7 +7274,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 89
+            "time_idx": 91
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7265,7 +7283,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 90
+            "time_idx": 92
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7274,7 +7292,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 91
+            "time_idx": 93
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7283,7 +7301,7 @@
             "year": 2015,
             "weekOfYear": 15,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 92
+            "time_idx": 94
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7292,7 +7310,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 93
+            "time_idx": 95
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7301,7 +7319,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 94
+            "time_idx": 96
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7310,7 +7328,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 95
+            "time_idx": 97
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7319,7 +7337,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 96
+            "time_idx": 98
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7328,7 +7346,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 97
+            "time_idx": 99
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7337,7 +7355,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 98
+            "time_idx": 100
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7346,7 +7364,7 @@
             "year": 2015,
             "weekOfYear": 16,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 99
+            "time_idx": 101
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7355,7 +7373,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 100
+            "time_idx": 102
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7364,7 +7382,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 101
+            "time_idx": 103
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7373,7 +7391,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 102
+            "time_idx": 104
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7382,7 +7400,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 103
+            "time_idx": 105
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7391,7 +7409,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 104
+            "time_idx": 106
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7400,7 +7418,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 105
+            "time_idx": 107
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7409,7 +7427,7 @@
             "year": 2015,
             "weekOfYear": 17,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 106
+            "time_idx": 108
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7418,7 +7436,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 107
+            "time_idx": 109
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7427,7 +7445,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 108
+            "time_idx": 110
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7436,7 +7454,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 109
+            "time_idx": 111
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7445,7 +7463,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 110
+            "time_idx": 112
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7454,7 +7472,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 111
+            "time_idx": 113
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7463,7 +7481,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 112
+            "time_idx": 114
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7472,7 +7490,7 @@
             "year": 2015,
             "weekOfYear": 18,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 113
+            "time_idx": 115
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7481,7 +7499,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 114
+            "time_idx": 116
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7490,7 +7508,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 115
+            "time_idx": 117
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7499,7 +7517,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 116
+            "time_idx": 118
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7508,7 +7526,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 117
+            "time_idx": 119
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7517,7 +7535,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 118
+            "time_idx": 120
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7526,7 +7544,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 119
+            "time_idx": 121
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7535,7 +7553,7 @@
             "year": 2015,
             "weekOfYear": 19,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 120
+            "time_idx": 122
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7544,7 +7562,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 121
+            "time_idx": 123
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7553,7 +7571,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 122
+            "time_idx": 124
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7562,7 +7580,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 123
+            "time_idx": 125
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7571,7 +7589,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 2.142857142857143,
-            "time_idx": 124
+            "time_idx": 126
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7580,7 +7598,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 125
+            "time_idx": 127
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7589,7 +7607,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 126
+            "time_idx": 128
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7598,7 +7616,7 @@
             "year": 2015,
             "weekOfYear": 20,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 127
+            "time_idx": 129
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7607,7 +7625,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 128
+            "time_idx": 130
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7616,7 +7634,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 129
+            "time_idx": 131
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7625,7 +7643,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 130
+            "time_idx": 132
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7634,7 +7652,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 131
+            "time_idx": 133
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7643,7 +7661,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 132
+            "time_idx": 134
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7652,7 +7670,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 133
+            "time_idx": 135
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7661,7 +7679,7 @@
             "year": 2015,
             "weekOfYear": 21,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 134
+            "time_idx": 136
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7670,7 +7688,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 135
+            "time_idx": 137
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7679,7 +7697,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 136
+            "time_idx": 138
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7688,7 +7706,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 137
+            "time_idx": 139
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7697,7 +7715,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 138
+            "time_idx": 140
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7706,7 +7724,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 139
+            "time_idx": 141
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7715,7 +7733,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 140
+            "time_idx": 142
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7724,7 +7742,7 @@
             "year": 2015,
             "weekOfYear": 22,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 141
+            "time_idx": 143
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7733,7 +7751,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 142
+            "time_idx": 144
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7742,7 +7760,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 143
+            "time_idx": 145
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7751,7 +7769,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 144
+            "time_idx": 146
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7760,7 +7778,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 145
+            "time_idx": 147
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7769,7 +7787,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 146
+            "time_idx": 148
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7778,7 +7796,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 147
+            "time_idx": 149
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7787,7 +7805,7 @@
             "year": 2015,
             "weekOfYear": 23,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 148
+            "time_idx": 150
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7796,7 +7814,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 149
+            "time_idx": 151
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7805,7 +7823,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 150
+            "time_idx": 152
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7814,7 +7832,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 151
+            "time_idx": 153
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7823,7 +7841,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 152
+            "time_idx": 154
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7832,7 +7850,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 153
+            "time_idx": 155
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7841,7 +7859,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 154
+            "time_idx": 156
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7850,7 +7868,7 @@
             "year": 2015,
             "weekOfYear": 24,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 155
+            "time_idx": 157
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7859,7 +7877,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 156
+            "time_idx": 158
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7868,7 +7886,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 157
+            "time_idx": 159
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7877,7 +7895,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 158
+            "time_idx": 160
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7886,7 +7904,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 159
+            "time_idx": 161
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7895,7 +7913,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 160
+            "time_idx": 162
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7904,7 +7922,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 161
+            "time_idx": 163
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7913,7 +7931,7 @@
             "year": 2015,
             "weekOfYear": 25,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 162
+            "time_idx": 164
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7922,7 +7940,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 163
+            "time_idx": 165
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7931,7 +7949,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 164
+            "time_idx": 166
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7940,7 +7958,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 165
+            "time_idx": 167
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7949,7 +7967,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 166
+            "time_idx": 168
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7958,7 +7976,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 167
+            "time_idx": 169
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7967,7 +7985,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 168
+            "time_idx": 170
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7976,7 +7994,7 @@
             "year": 2015,
             "weekOfYear": 26,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 169
+            "time_idx": 171
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7985,7 +8003,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 170
+            "time_idx": 172
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -7994,7 +8012,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 171
+            "time_idx": 173
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8003,7 +8021,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 172
+            "time_idx": 174
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8012,7 +8030,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 173
+            "time_idx": 175
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8021,7 +8039,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 174
+            "time_idx": 176
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8030,7 +8048,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 175
+            "time_idx": 177
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8039,7 +8057,7 @@
             "year": 2015,
             "weekOfYear": 27,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 176
+            "time_idx": 178
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8048,7 +8066,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 177
+            "time_idx": 179
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8057,7 +8075,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 178
+            "time_idx": 180
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8066,7 +8084,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 179
+            "time_idx": 181
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8075,7 +8093,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 180
+            "time_idx": 182
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8084,7 +8102,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 181
+            "time_idx": 183
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8093,7 +8111,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 182
+            "time_idx": 184
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8102,7 +8120,7 @@
             "year": 2015,
             "weekOfYear": 28,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 183
+            "time_idx": 185
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8111,7 +8129,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 184
+            "time_idx": 186
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8120,7 +8138,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 2.2857142857142856,
-            "time_idx": 185
+            "time_idx": 187
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8129,7 +8147,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 2.2857142857142856,
-            "time_idx": 186
+            "time_idx": 188
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8138,7 +8156,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 187
+            "time_idx": 189
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8147,7 +8165,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 188
+            "time_idx": 190
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8156,7 +8174,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 189
+            "time_idx": 191
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8165,7 +8183,7 @@
             "year": 2015,
             "weekOfYear": 29,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 190
+            "time_idx": 192
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8174,7 +8192,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 191
+            "time_idx": 193
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8183,7 +8201,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 192
+            "time_idx": 194
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8192,7 +8210,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 193
+            "time_idx": 195
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8201,7 +8219,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 194
+            "time_idx": 196
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8210,7 +8228,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 195
+            "time_idx": 197
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8219,7 +8237,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 196
+            "time_idx": 198
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8228,7 +8246,7 @@
             "year": 2015,
             "weekOfYear": 30,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 197
+            "time_idx": 199
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8237,7 +8255,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 198
+            "time_idx": 200
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8246,7 +8264,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 199
+            "time_idx": 201
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8255,7 +8273,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 200
+            "time_idx": 202
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8264,7 +8282,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 201
+            "time_idx": 203
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8273,7 +8291,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 202
+            "time_idx": 204
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8282,7 +8300,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 203
+            "time_idx": 205
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8291,7 +8309,7 @@
             "year": 2015,
             "weekOfYear": 31,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 204
+            "time_idx": 206
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8300,7 +8318,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 205
+            "time_idx": 207
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8309,7 +8327,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 206
+            "time_idx": 208
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8318,7 +8336,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 207
+            "time_idx": 209
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8327,7 +8345,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 208
+            "time_idx": 210
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8336,7 +8354,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 209
+            "time_idx": 211
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8345,7 +8363,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 210
+            "time_idx": 212
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8354,7 +8372,7 @@
             "year": 2015,
             "weekOfYear": 32,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 211
+            "time_idx": 213
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8363,7 +8381,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 212
+            "time_idx": 214
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8372,7 +8390,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 213
+            "time_idx": 215
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8381,7 +8399,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 214
+            "time_idx": 216
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8390,7 +8408,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 215
+            "time_idx": 217
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8399,7 +8417,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 216
+            "time_idx": 218
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8408,7 +8426,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 217
+            "time_idx": 219
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8417,7 +8435,7 @@
             "year": 2015,
             "weekOfYear": 33,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 218
+            "time_idx": 220
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8426,7 +8444,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 219
+            "time_idx": 221
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8435,7 +8453,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 220
+            "time_idx": 222
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8444,7 +8462,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 221
+            "time_idx": 223
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8453,7 +8471,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 222
+            "time_idx": 224
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8462,7 +8480,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 223
+            "time_idx": 225
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8471,7 +8489,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 224
+            "time_idx": 226
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8480,7 +8498,7 @@
             "year": 2015,
             "weekOfYear": 34,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 225
+            "time_idx": 227
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8489,7 +8507,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 226
+            "time_idx": 228
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8498,7 +8516,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 227
+            "time_idx": 229
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8507,7 +8525,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 228
+            "time_idx": 230
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8516,7 +8534,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 229
+            "time_idx": 231
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8525,7 +8543,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 230
+            "time_idx": 232
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8534,7 +8552,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 231
+            "time_idx": 233
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8543,7 +8561,7 @@
             "year": 2015,
             "weekOfYear": 35,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 232
+            "time_idx": 234
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8552,7 +8570,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 233
+            "time_idx": 235
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8561,7 +8579,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 234
+            "time_idx": 236
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8570,7 +8588,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 235
+            "time_idx": 237
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8579,7 +8597,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 236
+            "time_idx": 238
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8588,7 +8606,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 237
+            "time_idx": 239
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8597,7 +8615,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 238
+            "time_idx": 240
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8606,7 +8624,7 @@
             "year": 2015,
             "weekOfYear": 36,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 239
+            "time_idx": 241
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8615,7 +8633,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 240
+            "time_idx": 242
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8624,7 +8642,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 241
+            "time_idx": 243
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8633,7 +8651,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 242
+            "time_idx": 244
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8642,7 +8660,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 243
+            "time_idx": 245
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8651,7 +8669,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 244
+            "time_idx": 246
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8660,7 +8678,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 245
+            "time_idx": 247
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8669,7 +8687,7 @@
             "year": 2015,
             "weekOfYear": 37,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 246
+            "time_idx": 248
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8678,7 +8696,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 247
+            "time_idx": 249
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8687,7 +8705,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 2.2857142857142856,
-            "time_idx": 248
+            "time_idx": 250
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8696,7 +8714,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 2.142857142857143,
-            "time_idx": 249
+            "time_idx": 251
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8705,7 +8723,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 2.4285714285714284,
-            "time_idx": 250
+            "time_idx": 252
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8714,7 +8732,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 2.5714285714285716,
-            "time_idx": 251
+            "time_idx": 253
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8723,7 +8741,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 252
+            "time_idx": 254
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8732,7 +8750,7 @@
             "year": 2015,
             "weekOfYear": 38,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 253
+            "time_idx": 255
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8741,7 +8759,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 254
+            "time_idx": 256
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8750,7 +8768,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 255
+            "time_idx": 257
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8759,7 +8777,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 256
+            "time_idx": 258
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8768,7 +8786,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 257
+            "time_idx": 259
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8777,7 +8795,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 0.2857142857142857,
-            "time_idx": 258
+            "time_idx": 260
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8786,7 +8804,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 0.2857142857142857,
-            "time_idx": 259
+            "time_idx": 261
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8795,7 +8813,7 @@
             "year": 2015,
             "weekOfYear": 39,
             "pastWeeklySalesAvg": 0.14285714285714285,
-            "time_idx": 260
+            "time_idx": 262
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8804,7 +8822,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 261
+            "time_idx": 263
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8813,7 +8831,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 262
+            "time_idx": 264
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8822,7 +8840,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 263
+            "time_idx": 265
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8831,7 +8849,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 264
+            "time_idx": 266
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8840,7 +8858,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 265
+            "time_idx": 267
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8849,7 +8867,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 266
+            "time_idx": 268
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8858,7 +8876,7 @@
             "year": 2015,
             "weekOfYear": 40,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 267
+            "time_idx": 269
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8867,7 +8885,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 268
+            "time_idx": 270
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8876,7 +8894,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 269
+            "time_idx": 271
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8885,7 +8903,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 270
+            "time_idx": 272
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8894,7 +8912,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 271
+            "time_idx": 273
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8903,7 +8921,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 272
+            "time_idx": 274
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8912,7 +8930,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 273
+            "time_idx": 275
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8921,7 +8939,7 @@
             "year": 2015,
             "weekOfYear": 41,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 274
+            "time_idx": 276
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8930,7 +8948,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 275
+            "time_idx": 277
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8939,7 +8957,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 276
+            "time_idx": 278
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8948,7 +8966,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 277
+            "time_idx": 279
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8957,7 +8975,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 278
+            "time_idx": 280
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8966,7 +8984,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 279
+            "time_idx": 281
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8975,7 +8993,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 280
+            "time_idx": 282
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8984,7 +9002,7 @@
             "year": 2015,
             "weekOfYear": 42,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 281
+            "time_idx": 283
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -8993,7 +9011,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 282
+            "time_idx": 284
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9002,7 +9020,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 283
+            "time_idx": 285
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9011,7 +9029,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 284
+            "time_idx": 286
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9020,7 +9038,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 285
+            "time_idx": 287
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9029,7 +9047,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 286
+            "time_idx": 288
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9038,7 +9056,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 287
+            "time_idx": 289
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9047,7 +9065,7 @@
             "year": 2015,
             "weekOfYear": 43,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 288
+            "time_idx": 290
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9056,7 +9074,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 289
+            "time_idx": 291
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9065,7 +9083,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 290
+            "time_idx": 292
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9074,7 +9092,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 291
+            "time_idx": 293
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9083,7 +9101,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 292
+            "time_idx": 294
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9092,7 +9110,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 293
+            "time_idx": 295
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9101,7 +9119,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 294
+            "time_idx": 296
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9110,7 +9128,7 @@
             "year": 2015,
             "weekOfYear": 44,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 295
+            "time_idx": 297
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9119,7 +9137,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 296
+            "time_idx": 298
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9128,7 +9146,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 297
+            "time_idx": 299
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9137,7 +9155,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 298
+            "time_idx": 300
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9146,7 +9164,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 299
+            "time_idx": 301
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9155,7 +9173,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 300
+            "time_idx": 302
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9164,7 +9182,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 301
+            "time_idx": 303
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9173,7 +9191,7 @@
             "year": 2015,
             "weekOfYear": 45,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 302
+            "time_idx": 304
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9182,7 +9200,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 303
+            "time_idx": 305
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9191,7 +9209,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 304
+            "time_idx": 306
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9200,7 +9218,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 305
+            "time_idx": 307
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9209,7 +9227,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 306
+            "time_idx": 308
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9218,7 +9236,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 307
+            "time_idx": 309
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9227,7 +9245,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 308
+            "time_idx": 310
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9236,7 +9254,7 @@
             "year": 2015,
             "weekOfYear": 46,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 309
+            "time_idx": 311
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9245,7 +9263,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 310
+            "time_idx": 312
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9254,7 +9272,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 311
+            "time_idx": 313
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9263,7 +9281,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 312
+            "time_idx": 314
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9272,7 +9290,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 313
+            "time_idx": 315
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9281,7 +9299,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 314
+            "time_idx": 316
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9290,7 +9308,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 315
+            "time_idx": 317
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9299,7 +9317,7 @@
             "year": 2015,
             "weekOfYear": 47,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 316
+            "time_idx": 318
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9308,7 +9326,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 317
+            "time_idx": 319
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9317,7 +9335,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 318
+            "time_idx": 320
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9326,7 +9344,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 319
+            "time_idx": 321
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9335,7 +9353,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 320
+            "time_idx": 322
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9344,7 +9362,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 321
+            "time_idx": 323
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9353,7 +9371,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 322
+            "time_idx": 324
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9362,7 +9380,7 @@
             "year": 2015,
             "weekOfYear": 48,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 323
+            "time_idx": 325
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9371,7 +9389,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 324
+            "time_idx": 326
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9380,7 +9398,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 325
+            "time_idx": 327
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9389,7 +9407,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 326
+            "time_idx": 328
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9398,7 +9416,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 327
+            "time_idx": 329
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9407,7 +9425,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 328
+            "time_idx": 330
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9416,7 +9434,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 329
+            "time_idx": 331
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9425,7 +9443,7 @@
             "year": 2015,
             "weekOfYear": 49,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 330
+            "time_idx": 332
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9434,7 +9452,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 331
+            "time_idx": 333
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9443,7 +9461,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 332
+            "time_idx": 334
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9452,7 +9470,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 333
+            "time_idx": 335
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9461,7 +9479,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 334
+            "time_idx": 336
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9470,7 +9488,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 335
+            "time_idx": 337
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9479,7 +9497,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.4285714285714286,
-            "time_idx": 336
+            "time_idx": 338
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9488,7 +9506,7 @@
             "year": 2015,
             "weekOfYear": 50,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 337
+            "time_idx": 339
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9497,7 +9515,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 338
+            "time_idx": 340
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9506,7 +9524,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 1.2857142857142858,
-            "time_idx": 339
+            "time_idx": 341
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9515,7 +9533,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 340
+            "time_idx": 342
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9524,7 +9542,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 341
+            "time_idx": 343
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9533,7 +9551,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 1.8571428571428572,
-            "time_idx": 342
+            "time_idx": 344
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9542,7 +9560,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 1.7142857142857142,
-            "time_idx": 343
+            "time_idx": 345
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9551,7 +9569,7 @@
             "year": 2015,
             "weekOfYear": 51,
             "pastWeeklySalesAvg": 2.0,
-            "time_idx": 344
+            "time_idx": 346
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9560,7 +9578,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 345
+            "time_idx": 347
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9569,7 +9587,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 1.5714285714285714,
-            "time_idx": 346
+            "time_idx": 348
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9578,7 +9596,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 1.0,
-            "time_idx": 347
+            "time_idx": 349
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9587,7 +9605,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 1.1428571428571428,
-            "time_idx": 348
+            "time_idx": 350
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9596,7 +9614,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 349
+            "time_idx": 351
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9605,7 +9623,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 350
+            "time_idx": 352
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9614,7 +9632,7 @@
             "year": 2015,
             "weekOfYear": 52,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 351
+            "time_idx": 353
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9623,7 +9641,7 @@
             "year": 2015,
             "weekOfYear": 53,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 352
+            "time_idx": 354
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9632,7 +9650,7 @@
             "year": 2015,
             "weekOfYear": 53,
             "pastWeeklySalesAvg": 0.7142857142857143,
-            "time_idx": 353
+            "time_idx": 355
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9641,7 +9659,7 @@
             "year": 2015,
             "weekOfYear": 53,
             "pastWeeklySalesAvg": 0.8571428571428571,
-            "time_idx": 354
+            "time_idx": 356
         },
         {
             "dish_name": "The Brie Carre Pizza",
@@ -9650,7 +9668,7 @@
             "year": 2015,
             "weekOfYear": 53,
             "pastWeeklySalesAvg": 0.5714285714285714,
-            "time_idx": 355
+            "time_idx": 357
         }
     ],
     "The Calabrese Pizza": [

@@ -25,9 +25,6 @@
             <div class="nav-item" onclick="showPage('forecast')">
                 <span class="font-medium">5. Forecasting</span>
             </div>
-            <div class="nav-item" onclick="showPage('recommendations')">
-                <span class="font-medium">6. Recommendations</span>
-            </div>
             <div class="nav-item" onclick="showPage('settings')">
                 <span class="font-medium">Settings</span>
             </div>

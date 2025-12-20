@@ -119,3 +119,5 @@ def dataPrep(salesData):
         # print(dish_dataframes[dish_name].head(30))
 
     return dish_dataframes
+
+# train_random_forest(pd.read_json("upload/cleaned/sales.json"))
