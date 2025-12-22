@@ -1,4 +1,4 @@
-    // localStorage.clear()
+    localStorage.clear()
     // Data Store
     const store = {
         menu: [],
@@ -696,6 +696,40 @@
         
         const lowStock = store.pantry.filter(p => p.quantity < 10).length;
         document.getElementById('lowStockCount').textContent = lowStock;
+
+        const topDishes = document.getElementById("topDishes");
+        const dish30Days = [...new Set(store.sales.map(s => s.date))].sort().slice(-30);
+        const top10 = dish30Days =>{
+            const filteredSales = store.sales.filter(s =>
+                dish30Days.includes(s.date)
+            );
+        
+            const dishTotals = filteredSales.reduce((acc, sale) => {
+                if (!acc[sale.dish_name]) {
+                    acc[sale.dish_name] = 0;
+                }
+                acc[sale.dish_name] += sale.quantity;
+                return acc;
+            }, {});
+
+            return Object.entries(dishTotals)
+                .map(([dish_name, total_quantity]) => ({
+                    dish_name,
+                    total_quantity
+                }))
+                .sort((a, b) => b.total_quantity - a.total_quantity)
+                .slice(0, 10);
+        }
+
+        const top10Dish = top10(dish30Days)
+
+        topDishes.innerHTML = top10Dish.map(dish => `
+                <div style="padding: 12px; background-color: #ecfdf5; border-radius: 8px; border-left: 4px solid #10b981">
+                    <div style="font-size: 14px; color: #6b7280">
+                        ${dish.dish_name} - ${dish.total_quantity}
+                    </div>
+                </div>
+            `).join("")
         
         updateCharts();
 
