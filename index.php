@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartBite - Restaurant Inventory Intelligence</title>
+    <title>StockSense - Restaurant Inventory Intelligence</title>
     <?php include "asset/css/style.php" ?>
     <script src="asset/js/javascript.js"></script>
 </head>

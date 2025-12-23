@@ -4,7 +4,7 @@
             <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <span style="color: var(--deep-green); font-weight: bold; font-size: 20px;">🍴</span>
             </div>
-            <h1 class="text-white font-bold text-xl">SmartBite</h1>
+            <h1 class="text-white font-bold text-xl">StockSense</h1>
         </div>
         <nav class="space-y-2">
             <div class="nav-item active" onclick="showPage('dashboard')">
