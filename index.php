@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartBite - Restaurant Inventory Intelligence</title>
+    <title>StockSense - Restaurant Inventory Intelligence</title>
     <?php include "asset/css/style.php" ?>
     <script src="asset/js/javascript.js"></script>
 </head>
@@ -27,6 +27,9 @@
 
                 <!-- Pantry Management Page -->
                 <?php include "pages/pantry.php" ?>
+
+                <!-- Ingredients Management Page -->
+                <?php include "pages/ingredients.php" ?>
 
                 <!-- Sales Upload Page -->
                 <?php include "pages/salesUpload.php"?>
@@ -62,11 +65,20 @@
             recommendations: 'Ingredient Recommendations',
             settings: 'Settings & Export'
         };
+
         document.getElementById('pageTitle').textContent = titles[pageName];
         
+        if (pageName === 'dashboard') updateDashboard();
         if (pageName === 'menu') updateMenuTable();
         if (pageName === 'pantry') updatePantryTable();
+        if (pageName === 'ingredient') updateIngredientTable();
         if (pageName === 'sales') updateSalesTable();
+        if (pageName === 'forecast'){
+            forecastExportButton = document.getElementById('forecastExportButton');
+            forecastExportButton.style.display = 'none';
+            updateForecast();
+        }
+        if(pageName === 'settings') loadRestaurantInformation();
     }
 </script>
 </html>

@@ -1,4 +1,5 @@
 <div id="dashboard" class="page active">
+    <h2 class="text-4xl font-bold text-gray-900 mb-6" id="welcomeMessage">Welcome!</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div class="stat-card">
             <h3>Total Menu Items</h3>
